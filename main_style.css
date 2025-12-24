@@ -1,12 +1,6 @@
-:root{
-    --main-bg: white;
-    --green: rgb(0,128,1);
-    --grey-bg: rgb(239,239,239);
-    --footer-bg: rgb(63,59,59)
-}
-
-
-footer{
-    background: var(--footer-bg);
-    height: 200px;
+:root {
+  --main-bg: white;
+  --green: rgb(0, 128, 1);
+  --grey-bg: rgb(239, 239, 239);
+  --footer-bg: rgb(63, 59, 59);
 }
