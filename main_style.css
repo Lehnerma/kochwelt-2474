@@ -1,28 +1,31 @@
 @import url(./assets/font/font_raleway.css);
 :root {
   --main-header-shadow: rgba(0, 0, 0, 0.2);
-  --contact-header-shadow:();
-  
+  --contact-header-shadow: ();
+
   --main-bg: white;
   --green: rgb(0, 128, 0);
   --grey-bg: rgb(239, 239, 239);
   --contact-grey-bg: rgb(220, 220, 220);
   --main-footer-bg: rgb(64, 59, 59);
   --contact-footer-bg: rgb(35, 35, 35);
-  
+
   --main-text-color: black;
   --nav-text-color: rgb(64, 59, 59);
   --btn-text-color: white;
   --contact-text-color: rgb(35, 35, 35);
-  
-  --main-font: 'Raleway', sans-serif;
+
+  --main-font: "Raleway", sans-serif;
 }
 /* um die variablen nutzen zu können auf euren "privaten" css files müsst ihr folgende codezeile ,am besten, auf 1 schreiben:
   @import url(../main_style.css); 
-  .. greifen auf den Hauptordner zu und von dort aus könnt ihr dan nin den assets oder überall zugreifen.*/
+  .. greifen auf den Hauptordner zu und von dort aus könnt ihr dan nin den assets oder überall zugreifen.
+  
+  um auf die variablen zuzugreifen könnt ihr dann einfach diesem beispiel folgen:
+   background: var(--grey-bg); -> somit könnt ihr auf alle erstellten variablen von diesem css zugreifen. 
+  */
 
-
-*{
-  font-family: 'Raleway', sans-serif;
+* {
+  font-family: "Raleway", sans-serif;
   margin: 0;
 }

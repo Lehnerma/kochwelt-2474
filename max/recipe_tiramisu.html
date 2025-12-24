@@ -11,11 +11,11 @@
     <header class="header_placeholder">Placeholder</header>
 
     <main>
-        <article class="aot_container">
+        <article class="aot_container container">
             <h1>Tiramisu</h1>
             <div class="aot_img"></div>
             <section class="dish_infos">
-                <div class="dish_info">
+                <div class="dish_info" title="prepare time">
                     <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="dish_info_icon ">
                     <p class="dish_info_item">40min</p>
                 </div>
@@ -30,11 +30,64 @@
             </section>
         </article>
 
-        <article class="ingredients_container">
-            <section class="quantity_container">
-                <label for="quantity-inp">Zutaten für:</label>
-                <input type="number" min="1" max="10" value="1">
+        <article class="ingredients_container container">
+            <div class="separetor" title="separetor"></div>
+            <section class="quantity_container" title="quantity section for diffrent portions">
+                <label for="quantity_inp">Zutaten für:</label>
+                <input type="number" min="1" max="10" value="1" id="quantity_inp">
+                <button class="btn">Portionen</button>
             </section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Megne</th>
+                        <th>Einheit</th>
+                        <th>Produkt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr >
+                        <td>500</td>
+                        <td>g</td>
+                        <td>Mascarpone</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>g</td>
+                        <td>Puderzucker</td>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>g</td>
+                        <td><span>Eierbiskotten</span> <span>ca 1Pkg</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>stk</td>
+                        <td>Eigelb</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>stk</td>
+                        <td>Eiweiß</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tassen</td>
+                        <td><span>Kaffee</span> <span>abgekühlt</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>EL</td>
+                        <td>Amaretto</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><span>Kakaopulver</span><span>ungesüßt zum Bestreuen</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
     </main>
 </body>
