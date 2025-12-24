@@ -1,0 +1,46 @@
+@import url(../main_style.css);
+* {
+  margin: 0;
+  box-sizing: content-box;
+  background: var(--grey-bg);
+}
+header {
+  height: 72px;
+  background-color: var(--grey-bg);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 32px;
+}
+.aot_container {
+  width: 100%;
+}
+.aot_img {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  background-image: url(../assets/img/tiramisu.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.dish_infos {
+  display: flex;
+  gap: 8px;
+  padding: 16px 0;
+}
+.dish_info {
+  display: flex;
+  align-items: center;
+  background-color: var(--grey-bg);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.dish_info_icon {
+  width: 16px;
+}
+.dish_info_item {
+  padding-left: 12px;
+}
