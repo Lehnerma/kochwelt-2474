@@ -1,6 +1,17 @@
 :root {
+  --main-header-shadow: rgba(0, 0, 0, 0.2);
+  --contact-header-shadow:();
+  
   --main-bg: white;
-  --green: rgb(0, 128, 1);
+  --green: rgb(0, 128, 0);
   --grey-bg: rgb(239, 239, 239);
-  --footer-bg: rgb(63, 59, 59);
+  --contact-grey-bg: rgb(220, 220, 220);
+  --main-footer-bg: rgb(64, 59, 59);
+  --contact-footer-bg: rgb(35, 35, 35);
+  
+  --main-text-color: black;
+  --nav-text-color: rgb(64, 59, 59);
+  --btn-text-color: white;
+  --contact-text-color: rgb(35, 35, 35);
+  
 }
