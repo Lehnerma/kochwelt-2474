@@ -2,22 +2,22 @@
 
 :root {
   --header-height: 80px;
-  --main_font_size: 22px;
-  --heading_font_size: 56px;
-  --subheading_font_size: 18px;
---cards-font-size: 16px;
+
+  --main_font_size: 16px;
+  --heading_font_size: 32px;
+  --subheading_font_size: 16px;
+  --cards-font-size: 14px;
   --subdiscription_font_size: 10px;
 }
 * {
   margin: 0;
   box-sizing: content-box;
-
+  font-size: var(--main_font_size);
 }
 header /* a placeholder for the main desing*/ {
   height: var(--header-height);
   background-color: var(--grey-bg);
 }
-
 main {
   display: flex;
   flex-direction: column;
@@ -36,8 +36,11 @@ footer {
 .section {
   margin: 20px 0;
 }
-time abbr{
+time abbr {
   text-decoration: none;
+}
+h1{
+  font-size: var(--heading_font_size);
 }
 .aot_img {
   width: 100%;
@@ -53,31 +56,35 @@ time abbr{
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 0 16px;
-}
-.info_cards {
-  display: flex;
-  background: var(--grey-bg);
-  border-radius: 8px;
-  gap: 32px;
-  padding: 4px 8px;
+
 }
 .info_card {
   display: flex;
   align-items: center;
-  gap: 16px;
+  font-size: var(--cards-font-size);
   background-color: var(--grey-bg);
   border-radius: 8px;
+  gap: 16px;
   padding: 4px 8px;
 }
+.info_cards_bottom {
+  display: flex;
+  align-items: center;
+  font-size: var(--cards-font-size);
+  background: var(--grey-bg);
+  border-radius: 8px;
+  gap: 24px;
+  padding: 4px 8px;
+  height: 40px;
+}
 .card_icon {
-  width: 20px;
+  width: 18px;
 }
 .card_discription {
   display: flex;
   align-items: center;
 }
-.info_card_discription{
+.info_card_discription {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,32 +98,57 @@ time abbr{
 .quantity_container {
   font-size: var(--subheading_font_size);
   min-width: 200px;
-  max-width: 640px;
+  max-width: 440px;
   display: flex;
   align-items: center;
   height: 40px;
 }
 .inp_label {
   padding-right: 16px;
-  /* width: 120px; */
-  flex: 1;
-}
-.inp_field {
-  padding: 0;
-  flex: 2;
-  height: 32px;
-  border-color: var(--grey-bg);
-  border-radius: 8px;
-}
-.btn{
-  flex: 1;
-  border: none;
 }
 
-.separetor{
+input {
+  border: 1px solid var(--grey-bg);
+  border-radius: 8px 0 0 8px;
+  font-size: 20px;
+  height: 38px;
+  width: 144px;
+  padding-left: 24px;
+}
+.btn{
+  border: var(--green);
+  padding: 0 40px;
+  height: 40px;
+}
+/* ingredients */
+.separetor {
   height: 1px;
   background-color: var(--grey-bg);
 }
+.recipe_table{
+  width: 100%;
+}
+/* .recipe_body{
+
+} */
+.recipe_row{
+background: white;
+display: flex;
+padding: 16px 32px;
+border-radius: 8px;
+}
+.recipe_row:nth-child(odd){
+background: var(--grey-bg);
+
+}
+.recipe_amount{
+padding-right: 16px;
+}
+.recipe_ingridient{
+flex: 1;
+}
+
+
 
 /*creator Section*/
 .creator_img {

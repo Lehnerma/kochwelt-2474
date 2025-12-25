@@ -39,60 +39,23 @@
         <section class="quantity_container section" title="quantity section for diffrent portions">
           <label for="inp_quantity" class="inp_label">Zutaten für:</label>
           <input type="number" min="1" max="10" value="1" id="inp_quantity" class="inp_field" />
-          <button class="btn inp_field">Portionen</button>
+          <button class="btn inp_field" onclick="getRecipe()">Portionen</button>
         </section>
 
         <section class="ingredients">
-          <table>
-            <thead>
-              <tr>
-                <th colspan="2">Megne</th>
-                <th>Produkt</th>
+          <table class="recipe_table">
+            <tbody class="recipe_body" id="recipe_body">
+              <tr class="recipe_row">
+                <td class="recipe_amount">500 g</td>
+                <td class="recipe_ingridient">Mascarpone</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>500</td>
-                <td>g</td>
-                <td>Mascarpone</td>
+              <tr class="recipe_row">
+                <td class="recipe_amount">500 g</td>
+                <td class="recipe_ingridient">Mascarpone</td>
               </tr>
-              <tr>
-                <td>100</td>
-                <td>g</td>
-                <td>Puderzucker</td>
-              </tr>
-              <tr>
-                <td>200</td>
-                <td>g</td>
-                <td><span>Eierbiskotten</span> <span>ca 1Pkg</span></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>stk</td>
-                <td>Eigelb</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>stk</td>
-                <td>Eiweiß</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Tassen</td>
-                <td><span>Kaffee</span> <span>abgekühlt</span></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>EL</td>
-                <td>Amaretto</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td>
-                  <span>Kakaopulver</span>
-                  <p>ungesüßt zum Bestreuen</p>
-                </td>
+              <tr class="recipe_row">
+                <td class="recipe_amount">500 g</td>
+                <td class="recipe_ingridient">Mascarpone</td>
               </tr>
             </tbody>
           </table>
@@ -121,14 +84,14 @@
         </section>
 
         <aside class="cards_container section">
-          <section class="info_card">
+          <section class="info_cards_bottom">
             <img src="../assets/img/icons/av_time.svg" alt="watch" class="card_icon" />
             <div class="info_card_discription">
               <time datetime="time" class="prepair_item">4 <abbr title="Stunden">Std.</abbr> 30 <abbr title="Minuten">Min.</abbr></time>
               <p class="info_subdiscription">Gesamtzeit</p>
             </div>
           </section>
-          <section class="info_cards">
+          <section class="info_card">
             <div class="info_card">
               <img src="../assets/img/icons/hourglas.svg" alt="hourglas" class="card_icon" />
               <div class="info_card_discription">
@@ -155,5 +118,7 @@
       </article>
     </main>
     <footer></footer>
+
+    <script src="script_max.js"></script>
   </body>
 </html>
