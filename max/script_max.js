@@ -1,4 +1,4 @@
-let quantiy = document.getElementById('inp_quantity');
+let quantiy = document.getElementById('inp_quantity').value;
 let table = document.getElementById('recipe_body');
 let tiramisu =[
     {amount: 125, unit: "g", ingridient: "Mascarpone"},
@@ -10,9 +10,17 @@ let tiramisu =[
     {amount: 0.5, unit: "EL", ingridient: "Amaretto oder nach Geschmack auch mehr"},
     {amount: 1, unit: "EL" ,ingridient: "Kakaopulver ungesüßt, zum bestreuen"}
 ];
+function getQuantity(){
+    let value = document.getElementById('inp_quantity').value;
+    if (value == "" || value == 0){
+        value = 1
+        return value
+    } else {
+        return value
+    }
+}
 function getRecipe(factor){
-    factor = document.getElementById('inp_quantity').value;
-    console.log(factor);
+    factor = getQuantity();
     table.innerHTML = '';
     for (item in tiramisu){
         let row =    
@@ -23,7 +31,5 @@ function getRecipe(factor){
         </tr>
         `;
         table.innerHTML += row;
-        console.log(row);
-        
     }
 };

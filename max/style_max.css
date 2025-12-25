@@ -4,8 +4,8 @@
   --header-height: 80px;
 
   --main_font_size: 16px;
-  --heading_font_size: 32px;
-  --subheading_font_size: 16px;
+  --heading_font_size: 54px;
+  --subheading_font_size: 32px;
   --cards-font-size: 14px;
   --subdiscription_font_size: 10px;
 }
@@ -14,16 +14,20 @@
   box-sizing: content-box;
   font-size: var(--main_font_size);
 }
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 header /* a placeholder for the main desing*/ {
   height: var(--header-height);
   background-color: var(--grey-bg);
+  width: 100%;
 }
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0px 72px;
   max-width: 1260px;
+  flex: 1;
 }
 footer {
   height: var(--header-height);
@@ -39,8 +43,15 @@ footer {
 time abbr {
   text-decoration: none;
 }
+.abbr{
+  text-decoration: underline;
+}
 h1{
   font-size: var(--heading_font_size);
+}
+h2{
+  font-size: var(--subheading_font_size);
+  padding: 24px 0;
 }
 .aot_img {
   width: 100%;
@@ -143,14 +154,39 @@ background: var(--grey-bg);
 }
 .recipe_amount{
 padding-right: 16px;
+min-width: 64px;
 }
 .recipe_ingridient{
 flex: 1;
 }
+/* discription */
+.description{
+  display:flex;
+  flex-direction: column;
+}
+ol{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
-
-
+}
 /*creator Section*/
+.creator_container{
+  padding-bottom: 64px;
+}
+h3{
+  font-size: 24px;
+}
+.creator{
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+}
 .creator_img {
-  height: 72px;
+  height: 104px;
+  border-radius: 50%;
 }
