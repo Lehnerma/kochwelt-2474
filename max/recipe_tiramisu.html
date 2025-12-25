@@ -1,94 +1,148 @@
 <!DOCTYPE html>
 <html lang="de">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./max/img/logo_small.png" type="image/x-icon">
-    <link rel="stylesheet" href="../main_style.css"> <!-- main-style-->
-    <link rel="stylesheet" href="./style_max.css"> <!-- test style -->
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../main_style.css" />
+    <!-- main-style-->
+    <link rel="stylesheet" href="./style_max.css" />
+    <!-- test style -->
+    <title>Tiramisu</title>
+  </head>
+
+  <body>
     <header class="header_placeholder">Placeholder</header>
 
     <main>
-        <article class="aot_container container">
-            <h1>Tiramisu</h1>
-            <div class="aot_img"></div>
-            <section class="dish_infos">
-                <div class="dish_info" title="prepare time">
-                    <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="dish_info_icon ">
-                    <p class="dish_info_item">40min</p>
-                </div>
-                <div class="dish_info">
-                    <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="dish_info_icon">
-                    <p class="dish_info_item" >mittel</p>
-                </div>
-                <div class="dish_info">
-                    <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="dish_info_icon">
-                    <time class="dish_info_item">24.12.2025</time>
-                </div>
-            </section>
-        </article>
+      <article class="aot_container container">
+        <h1>Tiramisu</h1>
+        <div class="aot_img"></div>
+        <section class="dish_infos">
+          <div class="dish_info" title="prepare time">
+            <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="dish_info_icon" />
+            <p class="dish_info_item">40min</p>
+          </div>
+          <div class="dish_info" title="difficult">
+            <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="dish_info_icon" />
+            <p class="dish_info_item">mittel</p>
+          </div>
+          <div class="dish_info" title="creation date">
+            <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="dish_info_icon" />
+            <time class="dish_info_item">24.12.2025</time>
+          </div>
+        </section>
+      </article>
 
-        <article class="ingredients_container container">
-            <div class="separetor" title="separetor"></div>
-            <section class="quantity_container" title="quantity section for diffrent portions">
-                <label for="quantity_inp">Zutaten für:</label>
-                <input type="number" min="1" max="10" value="1" id="quantity_inp">
-                <button class="btn">Portionen</button>
-            </section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Megne</th>
-                        <th>Einheit</th>
-                        <th>Produkt</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr >
-                        <td>500</td>
-                        <td>g</td>
-                        <td>Mascarpone</td>
-                    </tr>
-                    <tr>
-                        <td>100</td>
-                        <td>g</td>
-                        <td>Puderzucker</td>
-                    </tr>
-                    <tr>
-                        <td>200</td>
-                        <td>g</td>
-                        <td><span>Eierbiskotten</span> <span>ca 1Pkg</span></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>stk</td>
-                        <td>Eigelb</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>stk</td>
-                        <td>Eiweiß</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Tassen</td>
-                        <td><span>Kaffee</span> <span>abgekühlt</span></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>EL</td>
-                        <td>Amaretto</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><span>Kakaopulver</span><span>ungesüßt zum Bestreuen</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
+      <article class="ingredients_container container">
+        <div class="separetor" title="separetor"></div>
+        <section class="quantity_container" title="quantity section for diffrent portions">
+          <label for="quantity_inp">Zutaten für:</label>
+          <input type="number" min="1" max="10" value="1" id="quantity_inp" />
+          <button class="btn">Portionen</button>
+        </section>
+        <section class="ingredients">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Megne</th>
+                <th>Produkt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>500</td>
+                <td>g</td>
+                <td>Mascarpone</td>
+              </tr>
+              <tr>
+                <td>100</td>
+                <td>g</td>
+                <td>Puderzucker</td>
+              </tr>
+              <tr>
+                <td>200</td>
+                <td>g</td>
+                <td><span>Eierbiskotten</span> <span>ca 1Pkg</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>stk</td>
+                <td>Eigelb</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>stk</td>
+                <td>Eiweiß</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Tassen</td>
+                <td><span>Kaffee</span> <span>abgekühlt</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>EL</td>
+                <td>Amaretto</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <span>Kakaopulver</span>
+                  <p>ungesüßt zum Bestreuen</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="description">
+          <h3>Zubereitung</h3>
+          <ol>
+            <li>
+              <p>Am besten alle Zutaten aus dem Kühlschrank holen und schon auf Zimmertemperatur bringen.</p>
+            </li>
+            <li>
+              <p>Eigelb mit Puderzucker über Wasserdampf zur <abbr title="Die Masse sollte eine Temperatur von ca 80° erreichen um die Proteine zu aktivieren">Rose</abbr> abziehen und in der Maschine kalt schlagen. Amaretto langsam in die Eigelbmasse einlaufen lassen.</p>
+            </li>
+            <li>
+              <p>Eiweiß mit etwas <strong>Salz</strong> aufschlagen. Abwechselnd dann die Mascarpone und das Eiweiß unter die abgekühlte Eigelb-Creme heben.</p>
+              <p><strong>Vorsicht: am besten mit einem Schneebesen oder Kochlöffel unterheben nicht mit der Rührmaschiene!</strong></p>
+            </li>
+            <li>
+              <p>Biskotten in kalten Kaffee tauken und kurz abtropfen lassen.</p>
+            </li>
+            <li>
+              <p>Den Boden einer Form bedecken, darauf dann die getunken Biskuitt legen und wieder eine Creme verteilen. So lange verteilen bis alles aufgebraucht ist. Danach Kühl stellen. Für mindestens 3-4 Stunden</p>
+            </li>
+          </ol>
+        </section>
+        <aside class="times">
+          <section class="total_time">
+            <img src="../assets/img/icons/av_time.svg" alt="watch" />
+            <time datetime="time" class="prepair_item">4 <abbr title="Stunden">Std.</abbr> 30 <abbr title="Minuten">Min.</abbr></time>
+            <p class="prepair_item">Gesamtzeit</p>
+          </section>
+          <section class="">
+            <div class="work_time">
+              <img src="../assets/img/icons/hourglas.svg" alt="hourglas" />
+              <time datetime="time">30 <abbr title="Minuten">Min.</abbr></time>
+              <p>Arbeitszeit</p>
+            </div>
+            <div class="rest_time">
+              <img src="../assets/img/icons/snozze_time.svg" alt="snozze time" />
+              <time datetime="time">4+ <abbr title="Stunden">Std.</abbr></time>
+            </div>
+          </section>
+        </aside>
+      </article>
+      <article class="container creator-container">
+        <h3>Erstellt von:</h3>
+        <section class="creator">
+            <img src="../assets/img/icons/account_circle.svg" alt="account-pic" class="creator_img">
+            <p>Max Lehner</p>
+        </section>
+      </article>
     </main>
-</body>
+  </body>
 </html>

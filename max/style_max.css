@@ -40,7 +40,7 @@ main {
   border-radius: 8px;
 }
 .dish_info_icon {
-  width: 16px;
+  width: 24px;
 }
 .dish_info_item {
   padding-left: 12px;
@@ -56,6 +56,15 @@ main {
   padding: 16px 0;
 }
 
-table, th, td {
+table, th{
   border: 1px solid green;
+}
+
+abbr{
+  text-decoration:  none;
+}
+
+
+.creator_img{
+  height: 72px;
 }
