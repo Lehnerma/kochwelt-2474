@@ -1,23 +1,44 @@
 @import url(../main_style.css);
+
+:root {
+  --header-height: 80px;
+  --main_font_size: 22px;
+  --heading_font_size: 56px;
+  --subheading_font_size: 18px;
+--cards-font-size: 16px;
+  --subdiscription_font_size: 10px;
+}
 * {
   margin: 0;
   box-sizing: content-box;
+
 }
-header {
-  height: 72px;
+header /* a placeholder for the main desing*/ {
+  height: var(--header-height);
   background-color: var(--grey-bg);
-} /* a placeholder for the main desing*/
+}
+
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 24px 32px;
+  justify-content: center;
+  margin: 0px 72px;
+  max-width: 1260px;
 }
-.container{
+footer {
+  height: var(--header-height);
+  background: var(--main-footer-bg);
+}
+.container {
   width: 100%;
   padding-top: 64px;
 }
-
+.section {
+  margin: 20px 0;
+}
+time abbr{
+  text-decoration: none;
+}
 .aot_img {
   width: 100%;
   height: 250px;
@@ -27,44 +48,77 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
-.dish_infos {
-  display: flex;
-  gap: 8px;
-  padding: 16px 0;
-}
-.dish_info {
+/* cards infos*/
+.cards_container {
   display: flex;
   align-items: center;
-  background-color: var(--grey-bg);
+  gap: 16px;
+  padding: 0 16px;
+}
+.info_cards {
+  display: flex;
+  background: var(--grey-bg);
+  border-radius: 8px;
+  gap: 32px;
   padding: 4px 8px;
+}
+.info_card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--grey-bg);
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+.card_icon {
+  width: 20px;
+}
+.card_discription {
+  display: flex;
+  align-items: center;
+}
+.info_card_discription{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--cards-font-size);
+  padding-right: 8px;
+}
+.info_subdiscription {
+  font-size: var(--subdiscription_font_size);
+}
+
+.quantity_container {
+  font-size: var(--subheading_font_size);
+  min-width: 200px;
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.inp_label {
+  padding-right: 16px;
+  /* width: 120px; */
+  flex: 1;
+}
+.inp_field {
+  padding: 0;
+  flex: 2;
+  height: 32px;
+  border-color: var(--grey-bg);
   border-radius: 8px;
 }
-.dish_info_icon {
-  width: 24px;
-}
-.dish_info_item {
-  padding-left: 12px;
+.btn{
+  flex: 1;
+  border: none;
 }
 
 .separetor{
   height: 1px;
-  width: 100%;
   background-color: var(--grey-bg);
 }
-.quantity_container{
 
-  padding: 16px 0;
-}
-
-table, th{
-  border: 1px solid green;
-}
-
-abbr{
-  text-decoration:  none;
-}
-
-
-.creator_img{
+/*creator Section*/
+.creator_img {
   height: 72px;
 }

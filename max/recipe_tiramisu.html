@@ -17,30 +17,31 @@
     <main>
       <article class="aot_container container">
         <h1>Tiramisu</h1>
-        <div class="aot_img"></div>
-        <section class="dish_infos">
-          <div class="dish_info" title="prepare time">
-            <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="dish_info_icon" />
-            <p class="dish_info_item">40min</p>
-          </div>
-          <div class="dish_info" title="difficult">
-            <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="dish_info_icon" />
-            <p class="dish_info_item">mittel</p>
-          </div>
-          <div class="dish_info" title="creation date">
-            <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="dish_info_icon" />
-            <time class="dish_info_item">24.12.2025</time>
-          </div>
-        </section>
+        <div class="aot_img section" title="Background Image from a Tiramisu"></div>
+        <aside class="cards_container section">
+          <section class="info_card" title="prepare time">
+            <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
+            <p class="card_discription">40 <abbr title="Minuten">min</abbr></p>
+          </section>
+          <section class="info_card" title="difficult">
+            <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="card_icon" />
+            <p class="card_discription">mittel</p>
+          </section>
+          <section class="info_card" title="creation date">
+            <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="card_icon" />
+            <time class="card_discription">24.12.2025</time>
+          </section>
+        </aside>
       </article>
 
       <article class="ingredients_container container">
         <div class="separetor" title="separetor"></div>
-        <section class="quantity_container" title="quantity section for diffrent portions">
-          <label for="quantity_inp">Zutaten für:</label>
-          <input type="number" min="1" max="10" value="1" id="quantity_inp" />
-          <button class="btn">Portionen</button>
+        <section class="quantity_container section" title="quantity section for diffrent portions">
+          <label for="inp_quantity" class="inp_label">Zutaten für:</label>
+          <input type="number" min="1" max="10" value="1" id="inp_quantity" class="inp_field" />
+          <button class="btn inp_field">Portionen</button>
         </section>
+
         <section class="ingredients">
           <table>
             <thead>
@@ -96,6 +97,7 @@
             </tbody>
           </table>
         </section>
+
         <section class="description">
           <h3>Zubereitung</h3>
           <ol>
@@ -117,21 +119,29 @@
             </li>
           </ol>
         </section>
-        <aside class="times">
-          <section class="total_time">
-            <img src="../assets/img/icons/av_time.svg" alt="watch" />
-            <time datetime="time" class="prepair_item">4 <abbr title="Stunden">Std.</abbr> 30 <abbr title="Minuten">Min.</abbr></time>
-            <p class="prepair_item">Gesamtzeit</p>
-          </section>
-          <section class="">
-            <div class="work_time">
-              <img src="../assets/img/icons/hourglas.svg" alt="hourglas" />
-              <time datetime="time">30 <abbr title="Minuten">Min.</abbr></time>
-              <p>Arbeitszeit</p>
+
+        <aside class="cards_container section">
+          <section class="info_card">
+            <img src="../assets/img/icons/av_time.svg" alt="watch" class="card_icon" />
+            <div class="info_card_discription">
+              <time datetime="time" class="prepair_item">4 <abbr title="Stunden">Std.</abbr> 30 <abbr title="Minuten">Min.</abbr></time>
+              <p class="info_subdiscription">Gesamtzeit</p>
             </div>
-            <div class="rest_time">
-              <img src="../assets/img/icons/snozze_time.svg" alt="snozze time" />
-              <time datetime="time">4+ <abbr title="Stunden">Std.</abbr></time>
+          </section>
+          <section class="info_cards">
+            <div class="info_card">
+              <img src="../assets/img/icons/hourglas.svg" alt="hourglas" class="card_icon" />
+              <div class="info_card_discription">
+                <time datetime="time">30 <abbr title="Minuten">Min.</abbr></time>
+                <p class="info_subdiscription">Arbeitszeit</p>
+              </div>
+            </div>
+            <div class="info_card">
+              <img src="../assets/img/icons/snozze_time.svg" alt="snozze time" class="card_icon" />
+              <div class="info_card_discription">
+                <time datetime="time">4+ <abbr title="Stunden">Std.</abbr></time>
+                <p class="info_subdiscription">Ruhezeit</p>
+              </div>
             </div>
           </section>
         </aside>
@@ -139,10 +149,11 @@
       <article class="container creator-container">
         <h3>Erstellt von:</h3>
         <section class="creator">
-            <img src="../assets/img/icons/account_circle.svg" alt="account-pic" class="creator_img">
-            <p>Max Lehner</p>
+          <img src="../assets/img/icons/account_circle.svg" alt="account-pic" class="creator_img" />
+          <p>Max Lehner</p>
         </section>
       </article>
     </main>
+    <footer></footer>
   </body>
 </html>
