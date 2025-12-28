@@ -1,7 +1,17 @@
-@import url(../main_style.css);
-
+@import url(./assets/font/font_raleway.css);
 :root {
-  --header-height: 80px;
+  --main-header-shadow: rgba(0, 0, 0, 0.2);
+
+  --green: rgb(0, 128, 0);
+  --grey-bg: rgb(239, 239, 239);
+  --contact-grey-bg: rgb(220, 220, 220);
+  --main-footer-bg: rgb(64, 59, 59);
+  --contact-footer-bg: rgb(35, 35, 35);
+
+  --main-text-color: black;
+  --nav-text-color: rgb(64, 59, 59);
+  --base_text: 
+  --main-font: "Raleway", sans-serif;
 
   --main_font_size: 16px;
   --heading_font_size: 54px;
@@ -9,29 +19,26 @@
   --cards-font-size: 14px;
   --subdiscription_font_size: 10px;
 }
+
 * {
   margin: 0;
   box-sizing: content-box;
   font-size: var(--main_font_size);
+  font-family: var(--main-font);
+}
+
+button{
+  background-color: var(--green);
+  cursor: pointer;
+  color: var(--btn-text-color);
+  border: none;
 }
 body{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-header /* a placeholder for the main desing*/ {
-  height: var(--header-height);
-  background-color: var(--grey-bg);
-  width: 100%;
-}
-main {
-  margin: 0px 72px;
-  max-width: 1260px;
-  flex: 1;
-}
-footer {
-  height: var(--header-height);
-  background: var(--main-footer-bg);
+  min-height: 100vh;
+  height: 100%;
 }
 .container {
   padding-top: 64px;
@@ -39,6 +46,50 @@ footer {
 .section {
   padding: 20px 0;
 }
+header{
+  height: var(--header-height);
+  background-color: var(--grey-bg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header nav{
+  max-width: 1260px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+header nav img{
+  height: 64px;
+  padding: 16px;
+}
+header nav ul{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 24px
+}
+header nav ul li{
+  list-style: none;
+
+}
+header nav ul li a{
+  text-decoration: none;
+  color: black;
+}
+.activ_link{
+  color: var(--green);
+  text-decoration: underline;
+}
+
+main {
+  margin: 0px 72px;
+  max-width: 1260px;
+  height: 100vh;
+  flex: 1;
+}
+
+
 abbr {
   text-decoration: none;
 }
@@ -119,12 +170,12 @@ h2{
 }
 .inp_label {
   padding-right: 16px;
+  width: 144px;
 }
 input {
   border: 1px solid var(--grey-bg);
   border-radius: 8px 0 0 8px;
   font-size: 20px;
-  width: 144px;
   padding-left: 24px;
 }
 .btn{
@@ -194,4 +245,73 @@ h3{
 .creator_img {
   height: 104px;
   border-radius: 50%;
+}
+
+footer {
+  height: var(--header-height);
+  background: var(--main-footer-bg);
+  width: 100%;
+}
+form h3{
+  padding-bottom: 24px;
+}
+.contact_main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.form_container{
+  background-color: var(--grey-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 8px;
+}
+.contact_main form{
+  display: flex;
+  flex-direction: column;
+
+}
+.form_section{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 16px 0;
+}
+form textarea{
+  border: none;
+  border-radius: 8px;
+}
+form label{
+  font-size: var(--main_font_size);
+}
+form section input {
+  border-radius: 8px;
+}
+
+
+
+@media(max-width: 770px){
+  :root{
+      --heading_font_size: 48px;
+  }
+}
+@media(max-width: 570px){
+  main{
+      margin: 32px;
+  }
+  .cards_container{
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+.quantity_container{
+  flex-direction: column;
+  gap: 8px;
+  height: 100px;
+}
+.inp_field{
+  border-radius: 8px;
+  text-align: center;
+}
 }

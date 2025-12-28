@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style_max.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header class="container contact_container">
+      <h1>Placeholder</h1>
+    </header>
+    <main class="contact_main">
+      <article class="form_container">
+        <form onsubmit="sendMail(event)">
+          <h3>Kontaktiere uns:</h3>
+          <section class="form_section">
+            <label for="form_name">Dein Name:</label>
+            <input type="text" name="Name:" id="form_name" required />
+          </section>
+          <section class="form_section">
+            <label for="form_mail">Deine E-Mail:</label>
+            <input name="Mail adresse:" type="mail" id="form_mail" required />
+          </section>
+          <section class="form_section">
+            <label for="form_msg">Deine Nachricht:</label>
+            <textarea name="Nachricht:" id="form_msg" rows="8"></textarea>
+          </section>
+          <button type="submit" class="form_btn">Abschicken</button>
+        </form>
+      </article>
+    </main>
+    <footer class="container"></footer>
+    <script src="script_max.js"></script>
+  </body>
 </html>

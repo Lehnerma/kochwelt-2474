@@ -1,0 +1,180 @@
+@import url(./assets/font/font_raleway.css);
+:root {
+  --header-shadow: rgba(0, 0, 0, 0.2);
+
+  --btn-green: rgb(0, 128, 0);
+  --btn-hover: rgb(0, 87, 0);
+  --grey-bg: rgb(239, 239, 239);
+  --footer-bg: rgb(64, 59, 59);
+
+  --maxWidth: 1440px;
+  --img_radius: 8px;
+}
+/*Main Desing */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background: var(--footer-bg);
+  height: 64px;
+}
+h1 {
+  font-size: 1.95rem;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+}
+h2 {
+  font-size: 1.56rem;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+}
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+  padding-top: 2em;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+  font-weight: 100;
+}
+.body_small {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+  font-weight: 100;
+}
+.overline {
+  font-size: 0.76rem;
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+}
+.container {
+  padding: 1em 4em 4em 4em;
+}
+.d_none {
+  display: none;
+}
+
+main {
+  flex: 1;
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+img {
+    object-fit: cover;
+    border-radius: var(--img_radius);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/*Header - Nav Bar*/
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1.5em 8em;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  max-width: var(--maxWidth);
+}
+nav img {
+  height: 2rem; /* changes to rm or em*/
+}
+nav ul {
+  display: flex;
+  align-items: flex-end;
+}
+nav ul li {
+  list-style: none;
+  padding-bottom: 8px;
+}
+nav ul li:hover {
+  font-size: 1.2rem;
+  color: var(--btn-hover);
+}
+nav ul li a {
+  text-underline-offset: 0.8em;
+  padding: 8px 24px;
+
+
+}
+nav ul li a:hover {
+  color: var(--btn-hover);
+  line-height: 2;
+}
+.activ_link {
+  color: var(--btn-green);
+  text-decoration: underline;
+}
+/* Recipe of the Day section */
+.aot {
+  display: flex;
+  justify-content: center;
+  padding: 8em 8em
+}
+.aot img{
+    min-width: 16em;
+    max-width: 24em;
+    aspect-ratio: 3/2;
+}
+.img_description {
+  padding: 0 2em 2em 1em;
+  display:flex;
+  flex-direction: column;
+}
+
+/* all recepie section */
+.recipes {
+  background: var(--grey-bg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2em;
+  padding: 1em 1em 8em 1em
+}
+.recipes_cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+.recipe_card img {
+    max-width: 16em;
+    aspect-ratio: 1/1;
+}
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.blog aside{
+    display: flex;
+    justify-content: space-between;
+
+}
+.blog_img{
+    background: url(../assets/img/vs_coffee.jpg);
+    aspect-ratio: 1/1;
+
+}
+
+.img{
+    width: 20px;
+}
