@@ -4,32 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style_max.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Contact</title>
   </head>
   <body>
-    <header class="container contact_container">
-      <h1>Placeholder</h1>
+    <header>
+      <nav>
+        <a href="./index.html" title="Kochwelt">
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" />
+        </a>
+        <ul class="link-section">
+          <li><a  href="./index.html">Start</a></li>
+          <li><a href="./recipe_tiramisu.html">Rezept des Tages</a></li>
+          <li><a class="activ_link" href="./contact.html">Kontakt</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </nav>
     </header>
-    <main class="contact_main">
-      <article class="form_container">
+    <main class="contact_container">
         <form onsubmit="sendMail(event)">
-          <h3>Kontaktiere uns:</h3>
-          <section class="form_section">
-            <label for="form_name">Dein Name:</label>
+          <h3>Kontaktiere uns</h3>
+          <section>
+            <label for="form_name" class="body_small" >Dein Name:</label>
             <input type="text" name="Name:" id="form_name" required />
           </section>
-          <section class="form_section">
-            <label for="form_mail">Deine E-Mail:</label>
+          <section>
+            <label for="form_mail" class="body_small" >Deine E-Mail:</label>
             <input name="Mail adresse:" type="mail" id="form_mail" required />
           </section>
-          <section class="form_section">
-            <label for="form_msg">Deine Nachricht:</label>
-            <textarea name="Nachricht:" id="form_msg" rows="8"></textarea>
+          <section>
+            <label for="form_msg" class="body_small">Deine Nachricht:</label>
+            <textarea name="Nachricht:" id="form_msg" maxlength="400" rows="8" required></textarea>
           </section>
-          <button type="submit" class="form_btn">Abschicken</button>
+          <button type="submit" class="btn_main">Abschicken</button>
         </form>
-      </article>
     </main>
     <footer class="container"></footer>
     <script src="script_max.js"></script>

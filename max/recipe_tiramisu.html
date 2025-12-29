@@ -6,113 +6,98 @@
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
     <link rel="stylesheet" href="../main_style.css" />
 
-    <link rel="stylesheet" href="./style_max.css" />
-    <link rel="stylesheet" href="rwd_max.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Tiramisu</title>
   </head>
 
   <body onload="getRecipe()">
-    <header class="header_placeholder">Placeholder</header>
-
+    <header>
+      <nav>
+        <a href="./index.html" title="Kochwelt">
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" />
+        </a>
+        <ul class="link-section">
+          <li><a href="./index.html">Start</a></li>
+          <li><a class="activ_link" href="./recipe_tiramisu.html">Rezept des Tages</a></li>
+          <li><a href="./contact.html">Kontakt</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <article class="aot_container container">
+      <article class="top_container container">
         <h1>Tiramisu</h1>
-        <div class="aot_img section" title="Background Image from a Tiramisu"></div>
-        <aside class="cards_container section">
+        <div class="aot_img" title="Background Image Tiramisu"></div>
+        <aside class="cards_container">
           <section class="info_card" title="prepare time">
             <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
-            <p class="card_discription">40 <abbr title="Minuten">min</abbr></p>
+            <time class="card_discription body_small">4<abbr title="Stunden" class="body_small">h</abbr>30<abbr title="Minuten" class="body_small">min</abbr></time>
           </section>
           <section class="info_card" title="difficult">
             <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="card_icon" />
-            <p class="card_discription">mittel</p>
+            <p class="card_discription body_small">mittel</p>
           </section>
           <section class="info_card" title="creation date">
             <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="card_icon" />
-            <time class="card_discription">24.12.2025</time>
+            <time class="card_discription body_small">24.12.2025</time>
           </section>
         </aside>
       </article>
 
       <article class="ingredients_container container">
         <div class="separetor" title="separetor"></div>
-        <section class="quantity_container section" title="quantity section for diffrent portions">
+        <section class="quantity_container" title="Quantity for dishes">
           <label for="inp_quantity" class="inp_label">Zutaten für:</label>
-          <input type="number" min="1" max="10" value="1" pattern="09" id="inp_quantity" class="inp_field" oninput="getRecipe()" placeholder="1" />
-          <button class="btn inp_field" onclick="getRecipe()">Portionen</button>
+          <input type="number" min="1" max="20" value="1" pattern="09"  placeholder="1"  id="inp_quantity" class="inp_field" oninput="getRecipe()"/>
+          <button class="btn_main btn_inp" onclick="getRecipe()">Portionen</button>
         </section>
 
-        <section class="ingredients section">
+        <section class="ingredients container">
           <table class="recipe_table">
-            <tbody class="recipe_body" id="recipe_body">
-              <!-- <tr class="recipe_row"> -> just for Testing the styling.
-                <td class="recipe_amount">500 g</td>
-                <td class="recipe_ingridient">Mascarpone</td>
-              </tr>
-              <tr class="recipe_row">
-                <td class="recipe_amount">500 g</td>
-                <td class="recipe_ingridient">Mascarpone</td>
-              </tr>
-              <tr class="recipe_row">
-                <td class="recipe_amount">500 g</td>
-                <td class="recipe_ingridient">Mascarpone</td>
-              </tr> -->
-            </tbody>
+            <tbody class="recipe_body" id="recipe_body"></tbody>
           </table>
         </section>
-
-        <section class="description">
-          <h2>Zubereitung</h2>
-          <ol>
-            <li>
-              <p>Am besten alle Zutaten aus dem Kühlschrank holen und schon auf Zimmertemperatur bringen.</p>
-            </li>
-            <li>
-              <p>Eigelb mit Puderzucker über Wasserdampf zur <abbr class="abbr" title="Die Masse sollte eine Temperatur von ca 80° erreichen um die Proteine zu aktivieren">Rose</abbr> abziehen und in der Maschine kalt schlagen. Amaretto langsam in die Eigelbmasse einlaufen lassen.</p>
-            </li>
-            <li>
-              <p>Eiweiß mit etwas <strong>Salz</strong> aufschlagen. Abwechselnd dann die Mascarpone und das Eiweiß unter die abgekühlte Eigelb-Creme heben.</p>
-              <p><strong>Vorsicht: am besten mit einem Schneebesen oder Kochlöffel unterheben nicht mit der Rührmaschiene!</strong></p>
-            </li>
-            <li>
-              <p>Biskotten in kalten Kaffee tauken und kurz abtropfen lassen.</p>
-            </li>
-            <li>
-              <p>Den Boden einer Form bedecken, darauf dann die getunken Biskuitt legen und wieder eine Creme verteilen. So lange verteilen bis alles aufgebraucht ist. Danach Kühl stellen. Für mindestens 3-4 Stunden</p>
-            </li>
-          </ol>
-        </section>
-
-        <aside class="cards_container section">
-          <section class="info_cards_bottom">
-            <img src="../assets/img/icons/av_time.svg" alt="watch" class="card_icon" />
-            <div class="info_card_discription">
-              <time datetime="time" class="prepair_item">4 <abbr title="Stunden">Std.</abbr> 30 <abbr title="Minuten">Min.</abbr></time>
-              <p class="info_subdiscription">Gesamtzeit</p>
-            </div>
-          </section>
-          <section class="info_card">
-            <div class="info_card">
-              <img src="../assets/img/icons/hourglas.svg" alt="hourglas" class="card_icon" />
-              <div class="info_card_discription">
-                <time datetime="time">30 <abbr title="Minuten">Min.</abbr></time>
-                <p class="info_subdiscription">Arbeitszeit</p>
-              </div>
-            </div>
-            <div class="info_card">
-              <img src="../assets/img/icons/snozze_time.svg" alt="snozze time" class="card_icon" />
-              <div class="info_card_discription">
-                <time datetime="time">4+ <abbr title="Stunden">Std.</abbr></time>
-                <p class="info_subdiscription">Ruhezeit</p>
-              </div>
-            </div>
-          </section>
-        </aside>
       </article>
-      <article class="container creator_container">
+
+      <article class="instruction container">
+        <h2>Zubereitung</h2>
+        <aside class="cards_container">
+          <div class="info_card">
+            <img src="../assets/img/icons/hourglas.svg" alt="hourglas" class="card_icon" />
+            <time datetime="time">30 <abbr title="Minuten" class="body_small">Min.</abbr></time>
+            <p class="body_small">Arbeitszeit</p>
+          </div>
+          <div class="info_card">
+            <img src="../assets/img/icons/snozze_time.svg" alt="snozze time" class="card_icon" />
+            <div class="info_card">
+              <time datetime="time" class="body_small">4+ <abbr title="Stunden" class="body_small">Std.</abbr></time>
+              <p class="body_small">Ruhezeit</p>
+            </div>
+          </div>
+        </aside>
+        <ol>
+          <li>
+            <p>Am besten alle Zutaten aus dem Kühlschrank holen und schon auf Zimmertemperatur bringen.</p>
+          </li>
+          <li>
+            <p class="body">Eigelb mit Puderzucker über Wasserdampf zur <abbr class="underline body" title="Die Masse sollte eine Temperatur von ca 80° erreichen um die Proteine zu aktivieren">Rose</abbr> abziehen und in der Maschine kalt schlagen. Amaretto langsam in die Eigelbmasse einlaufen lassen.</p>
+          </li>
+          <li>
+            <p class="body">Eiweiß mit etwas <strong>Salz</strong> aufschlagen. Abwechselnd dann die Mascarpone und das Eiweiß unter die abgekühlte Eigelb-Creme heben.</p>
+            <p><strong>Vorsicht: am besten mit einem Schneebesen oder Kochlöffel unterheben nicht mit der Rührmaschiene!</strong></p>
+          </li>
+          <li>
+            <p class="body">Biskotten in kalten Kaffee tauken und kurz abtropfen lassen.</p>
+          </li>
+          <li>
+            <p class="body">Den Boden einer Form bedecken, darauf dann die getunken Biskuitt legen und wieder eine Creme verteilen. So lange verteilen bis alles aufgebraucht ist. Danach Kühl stellen. Für mindestens 3-4 Stunden</p>
+          </li>
+        </ol>
+      </article>
+      <article class="container creator">
         <h3>Erstellt von:</h3>
-        <section class="creator section">
-          <img src="../assets/img/max_creator.jpg" alt="account-pic" class="creator_img" />
+        <section>
+          <img src="../assets/img/max_creator.jpg" alt="account-pic" class="img_creator" />
           <p>Max Lehner</p>
         </section>
       </article>
