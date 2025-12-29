@@ -1,4 +1,4 @@
-@import url(./assets/font/font_raleway.css);
+@import url(../assets/font/font_raleway.css);
 :root {
   --header-shadow: rgba(0, 0, 0, 0.2);
 
@@ -8,12 +8,13 @@
   --footer-bg: rgb(64, 59, 59);
 
   --maxWidth: 1440px;
-  --img_radius: 8px;
+  --img_radius: 1em;
 }
-/*Main Desing */
+/* ==========
+Main Style
+========== */
 * {
   margin: 0;
-  padding: 0;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
@@ -22,17 +23,39 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
+  align-items: center;
+  margin: 0 auto;
 }
-
-footer {
-  background: var(--footer-bg);
-  height: 64px;
+img {
+  object-fit: cover;
+  border-radius: var(--img_radius);
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+abbr {
+  text-decoration: none;
+}
+input {
+  border: 1px solid var(--grey-bg);
+  border-radius: 8px 0 0 8px;
+  font-size: 20px;
+  padding-left: 24px;
+}
+label {
+  padding-right: 0.5em;
+}
+/* ==========
+   Typography
+   ========== */
 h1 {
   font-size: 1.95rem;
   line-height: 1.55;
   letter-spacing: 0.02em;
+  padding-top: 2em;
 }
 h2 {
   font-size: 1.56rem;
@@ -43,7 +66,6 @@ h3 {
   font-size: 1.4rem;
   line-height: 1.6;
   letter-spacing: 0.025em;
-  padding-top: 2em;
 }
 h4 {
   font-size: 1.25rem;
@@ -51,101 +73,117 @@ h4 {
   letter-spacing: 0.025em;
   font-weight: 100;
 }
+.body{
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
 .body_small {
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   font-weight: 100;
 }
-.overline {
-  font-size: 0.76rem;
-  line-height: 1.65;
-  letter-spacing: 0.03em;
+/* usefull classes */
+.btn_main {
+  background: var(--btn-green);
+  color: white;
+  width: 14em;
+  height: 2.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+.underline {
+  text-decoration: underline;
+  font-style: italic;
 }
 .container {
-  padding: 1em 4em 4em 4em;
+  padding: 2em 0 2em 0;
 }
 .d_none {
   display: none;
 }
-
-main {
+.btn-bottom {
+  display: flex;
+  align-items: flex-end;
   flex: 1;
-  max-width: var(--maxWidth);
-  margin: 0 auto;
 }
-img {
-    object-fit: cover;
-    border-radius: var(--img_radius);
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-/*Header - Nav Bar*/
+/*==========
+Index
+==========*/
+/* nav bar */
 header {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 1.5em 8em;
+  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  max-width: var(--maxWidth);
+  flex: 1;
   max-width: var(--maxWidth);
 }
 nav img {
-  height: 2rem; /* changes to rm or em*/
+  height: 4.5em;
 }
 nav ul {
   display: flex;
   align-items: flex-end;
+  padding: 1em 1em;
+  gap: 2em;
 }
 nav ul li {
   list-style: none;
-  padding-bottom: 8px;
-}
-nav ul li:hover {
-  font-size: 1.2rem;
-  color: var(--btn-hover);
+  transition: line-height 150ms;
 }
 nav ul li a {
-  text-underline-offset: 0.8em;
-  padding: 8px 24px;
-
-
+  text-underline-offset: 0.4em;
 }
-nav ul li a:hover {
+nav ul li:hover {
   color: var(--btn-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.4em;
   line-height: 2;
 }
 .activ_link {
   color: var(--btn-green);
   text-decoration: underline;
+  text-decoration-thickness: 0.2em;
 }
-/* Recipe of the Day section */
+/*Recipe of the Day*/
+main {
+  flex: 1;
+  max-width: 1440px;
+}
 .aot {
   display: flex;
   justify-content: center;
-  padding: 8em 8em
+  padding: 8em 8em;
 }
-.aot img{
-    min-width: 16em;
-    max-width: 24em;
-    aspect-ratio: 3/2;
+.aot img {
+  min-width: 16em;
+  max-width: 24em;
+  aspect-ratio: 3/2;
 }
 .img_description {
   padding: 0 2em 2em 1em;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
-
-/* all recepie section */
+/*all recipes*/
 .recipes {
   background: var(--grey-bg);
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 2em;
-  padding: 1em 1em 8em 1em
+  padding: 1em 1em 8em 1em;
 }
 .recipes_cards {
   display: flex;
@@ -154,27 +192,182 @@ nav ul li a:hover {
   gap: 1.5em;
 }
 .recipe_card img {
-    max-width: 16em;
-    aspect-ratio: 1/1;
+  max-width: 16em;
+  aspect-ratio: 1/1;
 }
+.blog {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 8em 8em;
+}
+.blog aside {
+  display: flex;
+  flex-direction: column;
 
-.blog{
+}
+.img_blog {
+  background: url(../assets/img/vs_coffee.jpg);
+  aspect-ratio: 2/3;
+  width: 14em;
+}
+/*==========
+recipe
+==========*/
+.top_container {
+  display: flex;
+  flex-direction: column;
+}
+.aot_img {
+  height: 200px;
+  border-radius: var(--img_radius);
+  background-image: url(../assets/img/tiramisu.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cards_container {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1em 0;
+}
+.card_icon {
+  width: 1em;
+}
+.info_card {
+  display: flex;
+  align-items: center;
+  background-color: var(--grey-bg);
+  border-radius: var(--img_radius);
+  gap: 0.5em;
+  padding: 0.2em 0.5em;
+}
+.card_discription {
+  display: flex;
+  align-items: center;
+}
+.info_cards_bottom {
+  display: flex;
+  align-items: center;
+  background: var(--grey-bg);
+  border-radius: var(--img_radius);
+  gap: 1.5em;
+  height: 4em;
+  padding: 0 0.2em
+}
+.separetor {
+  height: 1px;
+  background-color: var(--grey-bg);
+  margin-bottom: 0.5em;
+}
+.ingredients_container {
+  display: flex;
+  flex-direction: column;
+}
+.quantity_container {
+  font-size: var(--subheading_font_size);
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.inp_field{
+  width: 8em;
+}
+table{
+  width: 100%;
+}
+tr {
+  background: white;
+  display: flex;
+  padding: 16px 32px;
+  border-radius: 8px;
+}
+tr:nth-child(odd) {
+  background: var(--grey-bg);
+}
+.recipe_amount{
+  padding-right: 1em;
+  min-width: 12em; /* adding for responsiv */
+  }
+  ol{
+    padding: 0;
+    list-style: none;
     display: flex;
     flex-direction: column;
-    text-align: center;
-
-}
-.blog aside{
-    display: flex;
-    justify-content: space-between;
-
-}
-.blog_img{
-    background: url(../assets/img/vs_coffee.jpg);
-    aspect-ratio: 1/1;
-
+    gap: 16px;
+  }
+.creator section{
+  display: flex;
+  align-items: center;
+  gap: 3em;
 }
 
-.img{
-    width: 20px;
+.img_creator {
+  width: 9em;
+  border-radius: 5em;
+}
+/*==========
+contact
+==========*/
+.contact_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+form {
+  background-color: var(--grey-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border-radius: var(--img_radius);
+  width: 400px;
+  min-width: 200px;
+}
+form h3 {
+  align-self: flex-start;
+}
+form section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  width: 100%;
+}
+form input,
+textarea {
+  border: none;
+  border-radius: var(--img_radius);
+  padding-left: 0.5em;
+}
+textarea {
+  padding-top: 0.5em;
+}
+form button {
+  margin: 24px 0 8px 0;
+}
+/*==========
+footer
+==========*/
+footer {
+  background: var(--footer-bg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer article{
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+}
+footer article section{
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+.footer_social_icon{
+  width: 3em;
 }
