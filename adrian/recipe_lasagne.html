@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../main_style.css" />
+    <link rel="stylesheet" href="./style_adrian.css" />
+    <script src="script_adrian.js">     </script>
+    <title>Lasagne</title>
+</head>
+
+<body onload="getRecipe()">
+    <header class="header_placeholder">Placeholder</header>
+
+    <main>
+    <!-- /* -- Article: Lasagne -- */ -->
+      <article class="aot_container container">
+        <h1>Lasagne</h1>
+        <div class="aot_img section" title="Image Lasagne"></div>
+        <aside class="cards_container section">
+          <section class="info_card" title="prepare time">
+            <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
+            <p class="card_discription">1 <abbr title="Stunden">h</abbr> 30 <abbr title="Minuten">min</abbr></p>
+          </section>
+          <section class="info_card" title="difficult">
+            <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="card_icon" />
+            <p class="card_discription">schwer</p>
+          </section>
+          <section class="info_card" title="creation date">
+            <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="card_icon" />
+            <time class="card_discription">15.05.2024</time>
+          </section>
+        </aside>
+      </article>
+
+    <!-- /* -- Ingredients Section -- */ -->
+      <article class="ingredients_container container">
+        <div class="separetor" title="separetor"></div>
+        <section class="quantity_container section" title="quantity section for diffrent portions">
+          <label for="inp_quantity" class="inp_label">Portionen:</label>
+          <input type="number" min="1" max="10" value="1" pattern="09" id="inp_quantity" class="inp_field" oninput="getRecipe()" placeholder="1" />
+          <button class="btn inp_field" onclick="getRecipe()">Portionen</button>
+        </section>
+
+        <section class="ingredients section">
+          <table class="recipe_table">
+            <tbody class="recipe_body" id="recipe_body">
+    <!-- Ingredients will be populated here by JavaScript -->
+            </tbody>
+          </table>
+        </section>
+     <!-- /* -- Preperation Section -- */ -->
+        <section class="preperation section">
+          <h2>Zubereitung</h2>
+        <aside class="cards_container section">
+    <section class="info_cards_bottom">
+      <img src="../assets/img/icons/av_time.svg" alt="watch" class="card_icon" />
+      <div class="info_card_discription">
+        <time datetime="PT2H" class="prepair_item">2 <abbr title="Stunden">Std.</abbr></time>
+        <p class="info_subdiscription">Gesamtzeit</p>
+      </div>
+    </section>
+
+    <section class="info_card">
+      <div class="info_card">
+        <img src="../assets/img/icons/hourglas.svg" alt="hourglass" class="card_icon" />
+        <div class="info_card_discription">
+          <time datetime="PT1H30M">1 <abbr title="Stunden">Std.</abbr> 30 <abbr title="Minuten">Min.</abbr></time>
+          <p class="info_subdiscription">Arbeitszeit</p>
+        </div>
+      </div>
+
+      <div class="info_card">
+        <img src="../assets/img/icons/snozze_time.svg" alt="snooze" class="card_icon" />
+        <div class="info_card_discription">
+          <time datetime="PT30M">30 <abbr title="Minuten">Min.</abbr></time>
+          <p class="info_subdiscription">Ruhezeit</p>
+        </div>
+      </div>
+    </section>
+  </aside>
+          <ol class="preperation_list">
+            <li>Die Zwiebel und den Knoblauch schälen und fein hacken. In einer großen Pfanne das Olivenöl erhitzen und die Zwiebel und den Knoblauch darin glasig dünsten.</li>
+            <li>Das Rinderhackfleisch hinzufügen und krümelig braten, bis es braun ist. Mit Salz, Pfeffer und italienischen Kräutern würzen.</li>
+            <li>Die passierten Tomaten in die Pfanne geben, gut umrühren und die Sauce bei mittlerer Hitze etwa 15 Minuten köcheln lassen.</li>
+            <li>In einem separaten Topf die Butter schmelzen, das Mehl hinzufügen und unter ständigem Rühren eine Mehlschwitze herstellen. Nach und nach die Milch einrühren, bis eine glatte Béchamelsauce entsteht. Mit Salz, Pfeffer und Muskatnuss würzen.</li>
+            <li>Den Backofen auf 180°C vorheizen. Eine Auflaufform leicht einfetten. Eine Schicht Lasagneplatten auf den Boden der Form legen, gefolgt von einer Schicht Fleischsauce und einer Schicht Béchamelsauce. Diesen Vorgang wiederholen, bis alle Zutaten aufgebraucht sind, und mit einer Schicht Béchamelsauce abschließen.</li>
+            <li>Den geriebenen Käse gleichmäßig über die oberste Schicht streuen. Die Lasagne im vorgeheizten Ofen etwa 30-40 Minuten backen, bis der Käse goldbraun und die Lasagne durchgegart ist.</li>
+            <li>Die Lasagne vor dem Servieren etwa 30 Minuten ruhen lassen. In Stücke schneiden und genießen!</li>
+          </ol>
+        </section>
+        </article>
+        <article class="container creator_container">
+        <h3>Erstellt von:</h3>
+        <section class="creator section">
+          <img src="../assets/img/adrian_creator.jpg" alt="account-pic" class="creator_img" />
+          <p>Adrian Huber</p>
+        </section>
+      </article>
+    </main>
+</body>
+</html>
