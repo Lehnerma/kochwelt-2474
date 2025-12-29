@@ -1,5 +1,6 @@
 let quantiy = document.getElementById("inp_quantity").value;
 let table = document.getElementById("recipe_body");
+let hamburgerMenu = document.getElementById("hamburger_menu");
 let tiramisu = [
   { amount: 125, unit: "g", ingridient: "Mascarpone" },
   { amount: 25, unit: "g", ingridient: "Staubzucker" },
@@ -51,4 +52,9 @@ function sendMail(event) {
     .catch((error) => {
       console.log(error);
     });
+}
+
+function toggleBurgerMenu() {
+  hamburgerMenu.classList.toggle("change");
+  document.getElementById("resp_nav").classList.toggle("resp_nav_closed");
 }
