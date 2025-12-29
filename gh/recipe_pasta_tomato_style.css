@@ -1,0 +1,99 @@
+@import url(gh_main_style.css);
+
+#recipe_image {
+  height: 180px;
+  max-width: 1440px;
+  padding: 24px 0;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.recipe_data {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 24px 0;
+}
+
+.recipe_data li {
+  margin-right: 24px;
+  background-color: var(--grey-bg);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 8px;
+}
+
+.recipe_data img {
+  height: 12px;
+}
+
+#servings_number_input {
+  border: 1px solid var(--grey-bg);
+  border-radius: 4px;
+  padding: 8px 4px;
+  margin-left: 8px;
+}
+
+#servings_number_button {
+  padding: 8px 24px;
+}
+
+button:hover {
+  filter: brightness(130%);
+}
+
+.recipe_ingredients {
+  margin: 16px auto;
+  width: 100%;
+}
+
+.recipe_ingredients tr {
+  height: 48px;
+}
+
+.recipe_ingredients td {
+  padding-left: 30px;
+  border-radius: 8px;
+}
+
+.recipe_ingredients tr:nth-child(odd) {
+  background-color: var(--grey-bg);
+}
+
+#preparation {
+  text-align: justify;
+}
+
+#recipe_creator {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#creator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#creator img {
+  border-radius: 50%;
+  width: 80px;
+}
+
+#creator p {
+  padding-left: 30px;
+}
+
+#creator span {
+  padding-left: 30px;
+}
+
+@media (max-width: 600px) {
+  .recipe_data li {
+    margin: 0;
+  }
+}

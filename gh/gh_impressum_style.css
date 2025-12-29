@@ -1,0 +1,22 @@
+@import url(gh_main_style.css);
+
+.legal_notice,
+.privacy_policy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.section_headline {
+  padding-top: 32px;
+}
+
+.section_subheading {
+  padding-top: 16px;
+}
+
+th {
+  width: 70px;
+}
