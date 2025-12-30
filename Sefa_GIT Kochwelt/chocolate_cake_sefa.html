@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Italienischer Schokokuchen</title>
+        <link rel="icon" href="./img/logo_small.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="./main_style.css">
+        <link rel="stylesheet" href="./style_sefa.css">
+        <script src="./script_sefa.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="main">
+                <header>
+                    <nav class="menuboard">
+                        <a class="logo" href="">
+                            <img src="./img/logo.png" alt="Logo mit Beschriftung">
+                        </a>
+                        <div class="menuTabs">
+                            <ul>
+                                <li><a href="index.html">Start</a></li>
+                                <li><a href="recipe.html">Rezept des Tages</a></li>
+                                <li><a href="contact.html">Kontakt</a></li>
+                                <li><a href="imprimt.html">Impressum</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="seperator"></div>
+                </header>
+                <main>
+                    <article>
+                        <section class="header-section">
+                            <header>
+                                <h1>Italienischer Schokoladenkuchen</h1>
+                            </header>
+                            <div class="aot-img"></div>
+                            <div class="dish-info">
+                                <figure>
+                                    <img class="clock-img" src="./img/icons/clock-regular.svg" alt="clock">
+                                    <figcaption>15 Min.</figcaption>    
+                                </figure>
+                                <figure>
+                                    <img class="brain-img" src="./img/icons/brain-solid.svg" alt="brain">
+                                    <figcaption>Normal</figcaption>    
+                                </figure>
+                                <figure>
+                                    <img class="calendar-img" src="./img/icons/calendar-alt-regular.svg" alt="calendar">
+                                    <figcaption>17.10.2007</figcaption>    
+                                </figure>
+                            </div>
+                        </section>
+                        <section class="ingredients-section">
+                            <div class="separator"></div>
+                            <div class="input-field">
+                                <label for="portion-number">Zutaten für</label>
+                                <input type="number" id="portion-number" min="1" max="20" value="1" step="1" onchange="checkValue()">
+                                <button class="btn-green" onclick="checkValue()">Portionen</button>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td style="width: 80px;">
+                                        <span id="adjusted-amount1">200</span>g Schokolade, zartbitter
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="adjusted-amount2">100</span>g Butter
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="adjusted-amount3">200</span>g Zucker
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="adjusted-amount4">2</span> EL Mehl
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="adjusted-amount5">4</span> Stk. Ei(er)
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td>
+                                        <span>Butter und Mehl oder Zucker für die Form</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section class="preparation-section">
+                            <header>
+                                <h2>Zubereitung</h2>
+                            </header>
+                            <div class="prep-info">
+                                <figure>
+                                    <img class="clock-img" src="./img/icons/clock-regular.svg" alt="clock">
+                                    <figcaption>ca. 15 Minuten</figcaption>    
+                                </figure>
+                                <figure>
+                                    <img class="clock-img" src="./img/icons/clock-regular.svg" alt="clock">
+                                    <figcaption>Gesamtzeit ca. 15 Minuten</figcaption>    
+                                </figure>
+                            </div>
+                            <ol style="list-style-type: none;">
+                                <li>
+                                    <p>Die Eier trennen. Eigelb mit Zucker schaumig schlagen, bis die Masse weiß wird. Die Butter mit der Schokolade im Wasserbad schmelzen und etwas abkühlen lassen. Das Eiweiß steif schlagen. Dann die Schokoladenbutter und das Mehl unter die Eigelbmasse rühren, das Eiweiß vorsichtig unterziehen.</p>
+                                </li>
+                                <li>
+                                    <p>Den Teig in eine gebutterte und ausgemehlte oder ausgezuckerte Form füllen und bei 160°C 40 Minuten backen.</p>
+                                </li>
+                                <li>
+                                    <p>Dazu passt Vanilleeis.</p>
+                                </li>
+                            </ol>
+                        </section>
+                        <aside>
+                            <header>
+                                <h3>Rezept erstellt von</h3>
+                            </header>
+                            <div class="author">
+                                <img class="author-img" src="./img/author_img.jpg" alt="author">
+                                <span class="author-name">Sefa Gürcan</span>
+                            </div>
+                        </aside>
+                    </article>
+                </main>
+            </div>
+        </div>
+        <footer id="footer">
+            <nav class="footerContainer">
+                <div class="footerLogo">
+                    <img src="./img/logo.png" alt="Kochwelt Logo">
+                </div>
+                <div class="footerIcons">
+                    <img src="./img/facebook_logo.svg" alt="Facebook">
+                    <img src="./img/instagram_logo.svg" alt="Instagram">
+                    <img src="./img/facebook_logo.svg" alt="Twitter">
+                </div>
+            </nav>
+        </footer>    
+    </body>
+</html>
