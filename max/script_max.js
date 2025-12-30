@@ -55,6 +55,6 @@ function sendMail(event) {
 }
 
 function toggleBurgerMenu() {
-  hamburgerMenu.classList.toggle("change");
+  document.getElementById('hamburger_menu').classList.toggle("change");
   document.getElementById("resp_nav").classList.toggle("resp_nav_closed");
 }

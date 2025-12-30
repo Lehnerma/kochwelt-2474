@@ -180,7 +180,7 @@ nav ul li:hover {
     background: rgba(239, 239, 239, 0.672);
     padding: 0;
     gap: 0;
-    transition: all 125ms ease-in-out;
+    transition: all 125ms ease-in;
   }
   .resp_nav li {
     position: relative;
@@ -191,6 +191,9 @@ nav ul li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .resp_nav li:hover{
+    background: rgba(139, 139, 139, 0.904);
   }
   .bar_container {
     display: inline-block;
@@ -468,8 +471,6 @@ footer article section {
 /*==========
 responsiv
 ==========*/
-@media (max-width: 1000px) {
-}
 @media (max-width: 570px) {
   main {
     margin: 0.5em;
@@ -494,5 +495,14 @@ responsiv
     border-radius: 8px;
     text-align: center;
     width: 2em;
+  }
+  .logo_footer{
+    display: none;
+  }
+  footer article{
+    justify-content: center;
+  }
+  footer article section{
+    gap: 1em;
   }
 }
