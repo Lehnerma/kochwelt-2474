@@ -80,7 +80,7 @@ h4 {
 }
 .body_small {
   font-size: 0.95rem;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   font-weight: 100;
 }
@@ -177,7 +177,7 @@ nav ul li:hover {
     top: 4.9em;
     right: 0;
     width: 100%;
-    background: rgba(239, 239, 239, 0.672);
+    background: rgb(239, 239, 239);
     padding: 0;
     gap: 0;
     transition: all 125ms ease-in;
