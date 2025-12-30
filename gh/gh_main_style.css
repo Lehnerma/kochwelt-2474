@@ -33,13 +33,18 @@ body {
 nav a {
   text-decoration: none;
   color: #000;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 nav a:hover {
   color: var(--green);
   cursor: pointer;
   border-bottom: 2px solid var(--green);
+}
+
+.active_link {
+  color: var(--green);
+  border-bottom: 3px solid var(--green);
 }
 
 .width_container {
