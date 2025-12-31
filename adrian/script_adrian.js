@@ -55,3 +55,7 @@ function formatAmount(amount) {
     ? amount
     : amount.toFixed(1).replace(".", ",");
 }
+function toggleBurgerMenu() {
+  document.getElementById('hamburger_menu').classList.toggle("change");
+  document.getElementById("resp_nav").classList.toggle("resp_nav_closed");
+}
