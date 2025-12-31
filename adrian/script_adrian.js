@@ -20,9 +20,9 @@ function getRecipe() {
     portions = 1;
   }
 
-  if (portions > 10) {
-    alert("Das Rezept ist auf 10 Portionen beschränkt!");
-    portions = 10;
+  if (portions > 20) {
+    alert("Das Rezept ist auf 20 Portionen beschränkt!");
+    portions = 20;
   }
 
   inp.value = portions;

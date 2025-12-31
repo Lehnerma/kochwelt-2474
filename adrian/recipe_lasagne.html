@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
     <link rel="stylesheet" href="../main_style.css" />
-    <link rel="stylesheet" href="./style_adrian.css" />
+    <link rel="stylesheet" href="./style_adrian.css">
     <script src="script_adrian.js">     </script>
     <title>Lasagne</title>
 </head>
 
 <body onload="getRecipe()">
-    <header class="header_placeholder">Placeholder</header>
+        <header>
+      <nav>
+        <a href="./index.html" title="Kochwelt">
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full"/>
+          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short">
+        </a>
+        <div class="bar_container" id="hamburger_menu" onclick="toggleBurgerMenu()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
+          <li><a href="../kochwelt-2474/max/index.html">Start</a></li>
+          <li class="activ_link"><a href="./adrian/recipe_lasagne.html">Rezept des Tages</a></li>
+          <li><a href="../kochwelt-2474/max/contact.html">Kontakt</a></li>
+          <li><a href="../kochwelt-2474/gh/impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
     <!-- /* -- Article: Lasagne -- */ -->
-      <article class="aot_container container">
+      <article class="top_container container">
         <h1>Lasagne</h1>
-        <div class="aot_img section" title="Image Lasagne"></div>
+        <div class="aot_img_adrian section" title="Image Lasagne">
+        </div>
         <aside class="cards_container section">
           <section class="info_card" title="prepare time">
             <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
-            <p class="card_discription">1 <abbr title="Stunden">h</abbr> 30 <abbr title="Minuten">min</abbr></p>
+            <time class="card_discription body_small">1 <abbr title="Stunden" class="body_small">h</abbr> 30 <abbr title="Minuten" class="body_small">min</abbr></time>
           </section>
           <section class="info_card" title="difficult">
             <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="card_icon" />
-            <p class="card_discription">schwer</p>
+            <p class="card_discription body_small">schwer</p>
           </section>
           <section class="info_card" title="creation date">
             <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="card_icon" />
@@ -39,11 +58,11 @@
         <div class="separetor" title="separetor"></div>
         <section class="quantity_container section" title="quantity section for diffrent portions">
           <label for="inp_quantity" class="inp_label">Portionen:</label>
-          <input type="number" min="1" max="10" value="1" pattern="09" id="inp_quantity" class="inp_field" oninput="getRecipe()" placeholder="1" />
-          <button class="btn inp_field" onclick="getRecipe()">Portionen</button>
+          <input type="number" min="1" max="20" value="1" pattern="09" id="inp_quantity" class="inp_field" oninput="getRecipe()" placeholder="1" />
+          <button class="btn_main btn_inp" onclick="getRecipe()">Portionen</button>
         </section>
 
-        <section class="ingredients section">
+        <section class="ingredients container">
           <table class="recipe_table">
             <tbody class="recipe_body" id="recipe_body">
     <!-- Ingredients will be populated here by JavaScript -->
@@ -51,18 +70,18 @@
           </table>
         </section>
      <!-- /* -- Preperation Section -- */ -->
-        <section class="preperation section">
+        <section class="instruction container">
           <h2>Zubereitung</h2>
-        <aside class="cards_container section">
-    <section class="info_cards_bottom">
-      <img src="../assets/img/icons/av_time.svg" alt="watch" class="card_icon" />
-      <div class="info_card_discription">
-        <time datetime="PT2H" class="prepair_item">2 <abbr title="Stunden">Std.</abbr></time>
-        <p class="info_subdiscription">Gesamtzeit</p>
+        <aside class="cards_container">
+    
+      <div class="info_card">
+        <img src="../assets/img/icons/av_time.svg" alt="watch" class="card_icon" />
+        <div class="info_card_discription">
+          <time datetime="PT2H" class="prepair_item">2 <abbr title="Stunden">Std.</abbr></time>
+          <p class="info_subdiscription">Gesamtzeit</p>
+        </div>
       </div>
-    </section>
-
-    <section class="info_card">
+    
       <div class="info_card">
         <img src="../assets/img/icons/hourglas.svg" alt="hourglass" class="card_icon" />
         <div class="info_card_discription">
@@ -74,11 +93,10 @@
       <div class="info_card">
         <img src="../assets/img/icons/snozze_time.svg" alt="snooze" class="card_icon" />
         <div class="info_card_discription">
-          <time datetime="PT30M">30 <abbr title="Minuten">Min.</abbr></time>
+          <time datetime="PT30M">30 <abbr title="Minuten" >Min.</abbr></time>
           <p class="info_subdiscription">Ruhezeit</p>
         </div>
       </div>
-    </section>
   </aside>
           <ol class="preperation_list">
             <li>Die Zwiebel und den Knoblauch schälen und fein hacken. In einer großen Pfanne das Olivenöl erhitzen und die Zwiebel und den Knoblauch darin glasig dünsten.</li>
@@ -91,13 +109,32 @@
           </ol>
         </section>
         </article>
-        <article class="container creator_container">
+        <article class="container creator">
         <h3>Erstellt von:</h3>
-        <section class="creator section">
-          <img src="../assets/img/adrian_creator.jpg" alt="account-pic" class="creator_img" />
+        <section>
+          <img src="../assets/img/adrian_creator.jpg" alt="account-pic" class="img_creator" />
           <p>Adrian Huber</p>
         </section>
       </article>
     </main>
+    <footer>
+      <article>
+        <a href="./index.html" title="Kochwelt" class="logo_footer">
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full"/>
+          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short">
+        </a>
+        <section class="social_links">
+          <a href="https://www.twitter.at/">
+            <img src="../assets/img/social-icons/twitter_bird.png" alt="Twitter Logo und Link" class="footer_social_icon" />
+          </a>
+          <a href="https://www.facebook.com/?locale=de_DE">
+            <img src="../assets/img/social-icons/facebook_logo.png" alt="Facebook Logo und Link" class="footer_social_icon" />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img src="../assets/img/social-icons/instagrram_logo.png" alt="Instagram Logo und Link" class="footer_social_icon" />
+          </a>
+        </section>
+      </article>
+    </footer>
 </body>
 </html>
