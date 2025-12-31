@@ -3,160 +3,214 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="recipe_pasta_tomato_style.css" />
+    <link rel="stylesheet" href="../main_style.css" />
     <script src="gh_script.js" defer></script>
-    <title>Nudeln mit Tomatensoße</title>
+    <script src="../max/script_max.js"></script>
+    <title>Kochwelt - Nudeln mit Tomatensoße</title>
+    <link rel="icon" href="../assets/img/logo_small.png" type="image/png" />
   </head>
   <body onload="calculateIngredientsAmount()">
-    <header id="header_background">
-      <section class="header_content width_container">
-        <a href="#">
+    <header>
+      <nav>
+        <a href="./index.html" title="Kochwelt">
           <img
             src="../assets/img/logo.png"
-            alt="Kochweltlogo mit Kochmütze und geschriebenes Wort Kochwelt"
-        /></a>
-        <button id="mobile_menu_button" onclick="toggleMobileMenu()">
-          Menu
-        </button>
-        <nav
-          id="mobile_nav_menu"
-          class="mobile_menu_box mobile_menu_box_closed"
-          onclick="toggleMobileMenu()"
+            alt="Kochwelt Logo"
+            class="logo_full"
+          />
+          <img
+            src="../assets/img/logo_small.png"
+            alt="Kochwelt Logo"
+            class="logo_short"
+          />
+        </a>
+        <div
+          class="bar_container"
+          id="hamburger_menu"
+          onclick="toggleBurgerMenu()"
         >
-          <a href="#">Start</a>
-          <a href="recipe_pasta_tomato.html">Rezept des Tages</a>
-          <a href="#">Kontakt</a>
-          <a href="impressum.html">Impressum</a>
-          <button>close</button>
-        </nav>
-        <nav id="standard_nav_menu">
-          <a href="#">Start</a>
-          <a class="active_link" href="recipe_pasta_tomato.html"
-            >Rezept des Tages</a
-          >
-          <a href="#">Kontakt</a>
-          <a href="impressum.html">Impressum</a>
-        </nav>
-      </section>
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
+          <li><a href="./index.html">Start</a></li>
+          <li class="activ_link">
+            <a id="recipe_of_the_day">Rezept des Tages</a>
+          </li>
+          <li><a href="./contact.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
     </header>
-    <main class="width_container">
-      <h1 id="page_headline">Nudeln mit Tomatensoße</h1>
-      <img
-        id="recipe_image"
-        src="img/pasta.jpg"
-        alt="Spirelli Nudeln mit leckerer Tomatensoße und Feldsalat on top"
-      />
-      <ul class="recipe_data">
-        <li>
-          <img src="../assets/img/icons/clock-regular.svg" alt="Uhr Icon" />30
-          Min
-        </li>
-        <li>
-          <img
-            src="../assets/img/icons/brain-solid.svg"
-            alt="Gehirn Icon"
-          />simpel
-        </li>
-        <li>
-          <img
-            src="../assets/img/icons/calendar-alt-regular.svg"
-            alt="Kalenderblatt Icon"
-          />26.12.2025
-        </li>
-      </ul>
-      <form id="serving_form">
-        <label for="servings_number">Zutaten für</label
-        ><input
-          id="servings_number_input"
-          name="servings_number"
-          type="number"
-          value="2"
-          onchange="calculateIngredientsAmount()"
-          onkeydown="handleEnterKeyPress(event)"
+    <main>
+      <article class="top_container container">
+        <h1>Nudeln mit Tomatensoße</h1>
+        <img
+          class="aot_img"
+          src="img/pasta.jpg"
+          alt="Spirelli Nudeln mit leckerer Tomatensoße und Feldsalat on top"
         />
-        <button
-          id="servings_number_button"
-          type="button"
-          onclick="calculateIngredientsAmount()"
+        <aside class="cards_container">
+          <section class="info_card" title="prepare time">
+            <img
+              src="../assets/img/icons/clock-regular.svg"
+              alt="Uhr Icon"
+              class="card_icon"
+            />
+            <p class="card_discription body_small">30 Min</p>
+          </section>
+          <section class="info_card" title="difficult">
+            <img
+              src="../assets/img/icons/brain-solid.svg"
+              alt="Gehirn Icon"
+              class="card_icon"
+            />
+            <p class="card_discription body_small">simpel</p>
+          </section>
+          <section class="info_card" title="creation date">
+            <img
+              src="../assets/img/icons/calendar-alt-regular.svg"
+              alt="Kalenderblatt Icon"
+              class="card_icon"
+            />
+            <p class="card_discription body_small">26.12.2025</p>
+          </section>
+        </aside>
+      </article>
+      <article class="ingredients_container container">
+        <section
+          class="quantity_container"
+          title="Quantity for dishes"
+          id="serving_form"
         >
-          Portionen
-        </button>
-      </form>
-      <table class="recipe_ingredients">
-        <tr>
-          <td><span id="amount_pasta"></span> g Nudeln</td>
-        </tr>
-        <tr>
-          <td><span id="amount_tomatoes"></span> g passierte Tomaten</td>
-        </tr>
-        <tr>
-          <td><span id="amount_tomatopaste"></span> EL Tomatenmark</td>
-        </tr>
-        <tr>
-          <td><span id="amount_oil"></span> EL Olivenöl</td>
-        </tr>
-        <tr>
-          <td><span id="amount_onion"></span> Zwiebel(n)</td>
-        </tr>
-        <tr>
-          <td><span id="amount_garlic"></span> Knoblauchzehe(n)</td>
-        </tr>
-        <tr>
-          <td>Salz und Pfeffer</td>
-        </tr>
-        <tr>
-          <td>Parmesan oder beliebiger Käse</td>
-        </tr>
-      </table>
-      <h2>Zubereitung</h2>
-      <ul class="recipe_data">
-        <li>
-          <img src="../assets/img/icons/clock-regular.svg" alt="Uhr Icon" />30
-          Mimuten
-        </li>
-        <li>
-          <img
-            src="../assets/img/icons/clock-regular.svg"
-            alt="Uhr Icon"
-          />Gesamtzeit 30 Minuten
-        </li>
-      </ul>
-      <p id="preparation">
-        Die Spaghetti bissfest kochen. In der Zeit die Zwiebel hacken und im
-        Kochtopf bei mittlerer Hitze mit Öl andünsten, sodann mit den passierten
-        Tomaten ablöschen. Während die Soße heiß wird, mit Tomatenmark, Salz und
-        Pfeffer abschmecken. Die abgegossenen Spaghetti mit der Soße und frisch
-        geriebenem Parmesan servieren.
-      </p>
-      <section id="recipe_creator">
-        <h3>Rezept erstellt von</h3>
-        <p id="creator">
-          <img src="../assets/img/profile.png" alt="image recipe creator" />
-          <span>Günter</span>
-        </p>
-      </section>
-    </main>
-    <footer id="footer_background">
-      <section class="footer_content width_container">
-        <section class="social_links">
-          <a class="link" href="https://www.facebook.com/"
-            ><img
-              src="../assets/img/social-icons/facebook_logo.png"
-              alt="facebook logo"
-          /></a>
-          <a class="link" href="https://www.instagram.com/"
-            ><img
-              src="../assets/img/social-icons/instagrram_logo.png"
-              alt="instagrram logo"
-          /></a>
-          <a class="link" href="https://www.tripadvisor.de/"
-            ><img
-              src="../assets/img/social-icons/tripadvisor_logo.png"
-              alt="tripadvisor logo"
-          /></a>
+          <label for="servings_number">Zutaten für</label
+          ><input
+            id="servings_number_input"
+            name="servings_number"
+            type="number"
+            value="2"
+            onchange="calculateIngredientsAmount()"
+            onkeydown="handleEnterKeyPress(event)"
+          />
+          <button
+            id="servings_number_button"
+            class="btn_main btn_inp"
+            type="button"
+            onclick="calculateIngredientsAmount()"
+          >
+            Portionen
+          </button>
         </section>
-        <a class="link" href="impressum.html">Impressum</a>
-      </section>
+        <table class="recipe_ingredients">
+          <tr>
+            <td><span id="amount_pasta"></span> g Nudeln</td>
+          </tr>
+          <tr>
+            <td><span id="amount_tomatoes"></span> g passierte Tomaten</td>
+          </tr>
+          <tr>
+            <td><span id="amount_tomatopaste"></span> EL Tomatenmark</td>
+          </tr>
+          <tr>
+            <td><span id="amount_oil"></span> EL Olivenöl</td>
+          </tr>
+          <tr>
+            <td><span id="amount_onion"></span> Zwiebel(n)</td>
+          </tr>
+          <tr>
+            <td><span id="amount_garlic"></span> Knoblauchzehe(n)</td>
+          </tr>
+          <tr>
+            <td>Salz und Pfeffer</td>
+          </tr>
+          <tr>
+            <td>Parmesan oder beliebiger Käse</td>
+          </tr>
+        </table>
+      </article>
+      <article class="instruction container">
+        <h2>Zubereitung</h2>
+        <aside class="cards_container">
+          <div class="info_card">
+            <img
+              src="../assets/img/icons/clock-regular.svg"
+              alt="Uhr Icon"
+              class="card_icon"
+            /><time datetime="time"
+              >20 <abbr title="Minuten" class="body_small">Min.</abbr></time
+            >
+            <p class="body_small">Arbeitszeit</p>
+          </div>
+          <div class="info_card">
+            <img
+              src="../assets/img/icons/clock-regular.svg"
+              alt="Uhr Icon"
+              class="card_icon"
+            /><time datetime="time" class="body_small"
+              >30 <abbr title="Stunden" class="body_small">Min.</abbr></time
+            >
+            <p class="body_small">Gesamt</p>
+          </div>
+        </aside>
+        <p>
+          Die Spaghetti bissfest kochen. In der Zeit die Zwiebel hacken und im
+          Kochtopf bei mittlerer Hitze mit Öl andünsten, sodann mit den
+          passierten Tomaten ablöschen. Während die Soße heiß wird, mit
+          Tomatenmark, Salz und Pfeffer abschmecken. Die abgegossenen Spaghetti
+          mit der Soße und frisch geriebenem Parmesan servieren.
+        </p>
+      </article>
+      <article class="creator container">
+        <h3>Rezept erstellt von:</h3>
+        <section>
+          <img
+            src="../assets/img/profile.png"
+            alt="image recipe creator"
+            class="img_creator"
+          />
+          <p>Günter</p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <article>
+        <a href="./index.html" title="Kochwelt" class="logo_footer">
+          <img
+            src="../assets/img/logo.png"
+            alt="Kochwelt Logo"
+            class="logo_full"
+          />
+          <img
+            src="../assets/img/logo_small.png"
+            alt="Kochwelt Logo"
+            class="logo_short"
+          />
+        </a>
+        <section class="social_links">
+          <a href="https://www.twitter.at/">
+            <img
+              src="../assets/img/social-icons/twitter_bird.png"
+              alt="Twitter Logo und Link"
+              class="footer_social_icon"
+            />
+          </a>
+          <a href="https://www.facebook.com/?locale=de_DE">
+            <img
+              src="../assets/img/social-icons/facebook_logo.png"
+              alt="Facebook Logo und Link"
+              class="footer_social_icon"
+            />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img
+              src="../assets/img/social-icons/instagrram_logo.png"
+              alt="Instagram Logo und Link"
+              class="footer_social_icon"
+            />
+          </a>
+        </section>
+      </article>
     </footer>
   </body>
 </html>

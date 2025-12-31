@@ -4,39 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="gh_impressum_style.css" />
+    <link rel="stylesheet" href="../main_style.css" />
     <script src="gh_script.js" defer></script>
+    <script src="../max/script_max.js"></script>
 
-    <title>Impressum und Datenschutz</title>
+    <title>Kochwelt - Impressum und Datenschutz</title>
   </head>
   <body>
-    <header id="header_background">
-      <section class="header_content width_container">
-        <a href="#">
+    <header>
+      <nav>
+        <a href="./index.html" title="Kochwelt">
           <img
             src="../assets/img/logo.png"
-            alt="Kochweltlogo mit Kochmütze und geschriebenes Wort Kochwelt"
-        /></a>
-        <button id="mobile_menu_button" onclick="toggleMobileMenu()">
-          Menu
-        </button>
-        <nav
-          id="mobile_nav_menu"
-          class="mobile_menu_box mobile_menu_box_closed"
-          onclick="toggleMobileMenu()"
+            alt="Kochwelt Logo"
+            class="logo_full"
+          />
+          <img
+            src="../assets/img/logo_small.png"
+            alt="Kochwelt Logo"
+            class="logo_short"
+          />
+        </a>
+        <div
+          class="bar_container"
+          id="hamburger_menu"
+          onclick="toggleBurgerMenu()"
         >
-          <a href="#">Start</a>
-          <a href="recipe_pasta_tomato.html">Rezept des Tages</a>
-          <a href="#">Kontakt</a>
-          <a href="impressum.html">Impressum</a>
-          <button>close</button>
-        </nav>
-        <nav id="standard_nav_menu">
-          <a href="#">Start</a>
-          <a href="recipe_pasta_tomato.html">Rezept des Tages</a>
-          <a href="#">Kontakt</a>
-          <a class="active_link" href="impressum.html">Impressum</a>
-        </nav>
-      </section>
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
+          <li><a href="./index.html">Start</a></li>
+          <li class="activ_link">
+            <a href="./recipe_tiramisu.html">Rezept des Tages</a>
+          </li>
+          <li><a href="./contact.html">Kontakt</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="width_container">
       <h1>Impressum und Datenschutz</h1>
@@ -108,27 +114,44 @@
         <p>Bitte kontaktieren Sie mich über die oben genannten Kontaktdaten</p>
       </section>
     </main>
-    <footer id="footer_background">
-      <section class="footer_content width_container">
+    <footer>
+      <article>
+        <a href="./index.html" title="Kochwelt" class="logo_footer">
+          <img
+            src="../assets/img/logo.png"
+            alt="Kochwelt Logo"
+            class="logo_full"
+          />
+          <img
+            src="../assets/img/logo_small.png"
+            alt="Kochwelt Logo"
+            class="logo_short"
+          />
+        </a>
         <section class="social_links">
-          <a class="link" href="https://www.facebook.com/"
-            ><img
+          <a href="https://www.twitter.at/">
+            <img
+              src="../assets/img/social-icons/twitter_bird.png"
+              alt="Twitter Logo und Link"
+              class="footer_social_icon"
+            />
+          </a>
+          <a href="https://www.facebook.com/?locale=de_DE">
+            <img
               src="../assets/img/social-icons/facebook_logo.png"
-              alt="facebook logo"
-          /></a>
-          <a class="link" href="https://www.instagram.com/"
-            ><img
+              alt="Facebook Logo und Link"
+              class="footer_social_icon"
+            />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img
               src="../assets/img/social-icons/instagrram_logo.png"
-              alt="instagrram logo"
-          /></a>
-          <a class="link" href="https://www.tripadvisor.de/"
-            ><img
-              src="../assets/img/social-icons/tripadvisor_logo.png"
-              alt="tripadvisor logo"
-          /></a>
+              alt="Instagram Logo und Link"
+              class="footer_social_icon"
+            />
+          </a>
         </section>
-        <a class="link" href="impressum.html">Impressum</a>
-      </section>
+      </article>
     </footer>
   </body>
 </html>

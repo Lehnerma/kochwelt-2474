@@ -2,6 +2,7 @@ const servingsButton = document.getElementById("servings_number_button");
 const servingsNumberInput = document.getElementById("servings_number_input");
 const mobileMenu = document.getElementById("mobile_nav_menu");
 const mobileMenuButton = document.getElementById("mobile_menu_button");
+const recipeOfTheDay = document.getElementById("recipe_of_the_day");
 
 const amountPasta = document.getElementById("amount_pasta");
 const amountTomatoes = document.getElementById("amount_tomatoes");
@@ -21,6 +22,10 @@ const minServings = 1;
 servingsNumberInput.min = minServings;
 const maxServings = 20;
 servingsNumberInput.max = maxServings;
+
+const recipeUrl = ["../recipe_tiramisu.html", "recipe_pasta_tomato.html"];
+
+recipeOfTheDay.href = setRecipeOfTheDay();
 
 function calculateServings(ingredientsAmount) {
   return servingsNumberInput.value * ingredientsAmount;
@@ -50,4 +55,10 @@ function handleEnterKeyPress(event) {
 
 function toggleMobileMenu() {
   mobileMenu.classList.toggle("mobile_menu_box_closed");
+}
+
+function setRecipeOfTheDay() {
+  let randomNumber = Math.floor(Math.random() * recipeUrl.length);
+
+  return recipeUrl[randomNumber];
 }
