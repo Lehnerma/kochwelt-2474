@@ -48,6 +48,15 @@ input {
 label {
   padding-right: 0.5em;
 }
+@media (max-width: 570px) {
+  main {
+    margin: 0.5em;
+  }
+  .container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
 /* ==========
    Typography
    ========== */
@@ -72,6 +81,11 @@ h4 {
   line-height: 1.6;
   letter-spacing: 0.025em;
   font-weight: 100;
+}
+.display_lg{
+  font-size: 2.44rem;
+  line-height: 1.55;
+  letter-spacing: 0.015em;
 }
 .body {
   font-size: 1rem;
@@ -259,12 +273,12 @@ main {
   }
 }
 @media (max-width: 570px) {
-  .aot{
+  .aot {
     flex-direction: column;
   }
-.img_description{
-  padding: 0;
-}
+  .img_description {
+    padding: 0;
+  }
 }
 /*all recipes*/
 .recipes {
@@ -303,7 +317,7 @@ main {
   width: 14em;
 }
 @media (max-width: 540px) {
-  .blog{
+  .blog {
     flex-direction: column;
     align-items: center;
   }
@@ -515,25 +529,36 @@ footer article section {
   footer article section {
     gap: 1em;
   }
-}
-/*==========
-responsiv
-==========*/
-@media (max-width: 570px) {
-  main {
-    margin: 0.5em;
-  }
-  .container {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-  .cards_container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   .inp_field {
     border-radius: 8px;
     text-align: center;
     width: 2em;
   }
+}
+/*==========
+sendt mail
+==========*/
+.landing_main{
+  display: flex;
+  align-items: center;
+}
+.landing_container {
+  background-image: url(./assets/img/offwhite-struc.jpg);
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--img_radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+.landing_container h2{
+  padding: 1em;
+}
+.landing_container h3{
+  padding-bottom: 1em;
+}
+.landing_container p{
+  padding: 0.5em;
 }
