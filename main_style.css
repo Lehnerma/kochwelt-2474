@@ -48,6 +48,15 @@ input {
 label {
   padding-right: 0.5em;
 }
+@media (max-width: 570px) {
+  main {
+    margin: 0.5em;
+  }
+  .container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
 /* ==========
    Typography
    ========== */
@@ -72,6 +81,11 @@ h4 {
   line-height: 1.6;
   letter-spacing: 0.025em;
   font-weight: 100;
+}
+.display_lg{
+  font-size: 2.44rem;
+  line-height: 1.55;
+  letter-spacing: 0.015em;
 }
 .body {
   font-size: 1rem;
@@ -146,7 +160,7 @@ nav ul {
 }
 nav ul li {
   list-style: none;
-  transition: line-height 150ms;
+  transition: line-height 150ms ease-in-out;
 }
 nav ul li a {
   text-underline-offset: 0.4em;
@@ -180,7 +194,7 @@ nav ul li:hover {
     background: rgb(239, 239, 239);
     padding: 0;
     gap: 0;
-    transition: all 125ms ease-in;
+    transition: all 125ms ease-in-out;
   }
   .resp_nav li {
     position: relative;
@@ -192,7 +206,7 @@ nav ul li:hover {
     align-items: center;
     justify-content: center;
   }
-  .resp_nav li:hover{
+  .resp_nav li:hover {
     background: rgba(139, 139, 139, 0.904);
   }
   .bar_container {
@@ -219,9 +233,21 @@ nav ul li:hover {
     transform: translate(0, -11px) rotate(45deg);
   }
 }
+@media (max-width: 570px) {
+  .logo_full {
+    display: none;
+  }
+  .logo_short {
+    display: block;
+    height: 3em;
+    padding: 1em 0;
+  }
+}
+
 /*==========
 Index
 ==========*/
+/* recipe of the day */
 main {
   flex: 1;
   max-width: 1440px;
@@ -229,17 +255,30 @@ main {
 .aot {
   display: flex;
   justify-content: center;
-  padding: 8em 8em;
+  padding: 6em 3em;
 }
 .aot img {
-  min-width: 16em;
-  max-width: 24em;
+  min-width: 10em;
+  width: 100%;
   aspect-ratio: 3/2;
 }
 .img_description {
   padding: 0 2em 2em 1em;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 1000px) {
+  .aot {
+    padding: 6em 2em;
+  }
+}
+@media (max-width: 570px) {
+  .aot {
+    flex-direction: column;
+  }
+  .img_description {
+    padding: 0;
+  }
 }
 /*all recipes*/
 .recipes {
@@ -257,12 +296,14 @@ main {
   gap: 1.5em;
 }
 .recipe_card img {
-  max-width: 16em;
+  min-width: 9em;
+  width: 100%;
+  max-width: 15em;
   aspect-ratio: 1/1;
 }
+/* blog */
 .blog {
   display: flex;
-  flex-direction: row;
   text-align: center;
   padding: 8em 8em;
 }
@@ -275,6 +316,13 @@ main {
   aspect-ratio: 2/3;
   width: 14em;
 }
+@media (max-width: 540px) {
+  .blog {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /*==========
 recipe
 ==========*/
@@ -444,6 +492,7 @@ textarea {
 form button {
   margin: 24px 0 8px 0;
 }
+
 /*==========
 footer
 ==========*/
@@ -452,6 +501,8 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 10em;
 }
 footer article {
   width: 100%;
@@ -468,41 +519,46 @@ footer article section {
   width: 3em;
   padding-right: 2em;
 }
-/*==========
-responsiv
-==========*/
 @media (max-width: 570px) {
-  main {
-    margin: 0.5em;
-  }
-  .container{
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .logo_full {
+  .logo_footer {
     display: none;
   }
-  .logo_short {
-    display: block;
-    height: 3em;
-    padding: 1em 0;
-  }
-  .cards_container {
-    flex-wrap: wrap;
+  footer article {
     justify-content: center;
+  }
+  footer article section {
+    gap: 1em;
   }
   .inp_field {
     border-radius: 8px;
     text-align: center;
     width: 2em;
   }
-  .logo_footer{
-    display: none;
-  }
-  footer article{
-    justify-content: center;
-  }
-  footer article section{
-    gap: 1em;
-  }
+}
+/*==========
+sendt mail
+==========*/
+.landing_main{
+  display: flex;
+  align-items: center;
+}
+.landing_container {
+  background-image: url(./assets/img/offwhite-struc.jpg);
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--img_radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+.landing_container h2{
+  padding: 1em;
+}
+.landing_container h3{
+  padding-bottom: 1em;
+}
+.landing_container p{
+  padding: 0.5em;
 }
