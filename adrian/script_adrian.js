@@ -21,7 +21,6 @@ function getRecipe() {
   }
 
   if (portions > 20) {
-    alert("Das Rezept ist auf 20 Portionen beschränkt!");
     portions = 20;
   }
 
