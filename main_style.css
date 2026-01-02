@@ -172,9 +172,7 @@ nav ul li:hover {
   text-underline-offset: 0.4em;
   line-height: 2;
 }
-.activ_link {
-  order: -1;
-}
+
 .activ_link a {
   color: var(--btn-green);
   text-decoration: underline;
@@ -231,6 +229,9 @@ nav ul li:hover {
   }
   .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
+  }
+  .activ_link {
+    order: -1;
   }
 }
 @media (max-width: 570px) {
@@ -310,6 +311,7 @@ main {
 .blog aside {
   display: flex;
   flex-direction: column;
+  padding: 0 1em;
 }
 .img_blog {
   background: url(../assets/img/vs_coffee.jpg);

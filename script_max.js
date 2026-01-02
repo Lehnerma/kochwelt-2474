@@ -47,7 +47,7 @@ function sendMail(event) {
     },
   })
     .then(() => {
-      window.location.href = "./mail_sendt.html"; // landing page after submit
+      window.location.href = "mail_sendt.html"; // landing page after submit
     })
     .catch((error) => {
       console.log(error);
