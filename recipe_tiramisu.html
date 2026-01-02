@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
 
-
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="main_style.css" />
     <title>Tiramisu</title>
   </head>
 
@@ -14,8 +13,8 @@
     <header>
       <nav>
         <a href="./index.html" title="Kochwelt">
-          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full"/>
-          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short">
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
+          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
         </a>
         <div class="bar_container" id="hamburger_menu" onclick="toggleBurgerMenu()">
           <div class="bar1"></div>
@@ -23,10 +22,10 @@
           <div class="bar3"></div>
         </div>
         <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
-          <li><a href="./index.html">Start</a></li>
+          <li ><a href="./index.html">Start</a></li>
           <li class="activ_link"><a href="./recipe_tiramisu.html">Rezept des Tages</a></li>
           <li><a href="./contact.html">Kontakt</a></li>
-          <li><a href="#">Impressum</a></li>
+          <li><a href="./gh/impressum.html">Impressum</a></li>
         </ul>
       </nav>
     </header>
@@ -54,7 +53,7 @@
         <div class="separetor" title="separetor"></div>
         <section class="quantity_container" title="Quantity for dishes">
           <label for="inp_quantity" class="inp_label">Zutaten für:</label>
-          <input type="number" min="1" max="20" value="1" pattern="09"  placeholder="1"  id="inp_quantity" class="inp_field" oninput="getRecipe()"/>
+          <input type="number" min="1" max="20" value="1" pattern="09" placeholder="1" id="inp_quantity" class="inp_field" oninput="getRecipe()" />
           <button class="btn_main btn_inp" onclick="getRecipe()">Portionen</button>
         </section>
 
@@ -112,8 +111,8 @@
     <footer>
       <article>
         <a href="./index.html" title="Kochwelt" class="logo_footer">
-          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full"/>
-          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short">
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
+          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
         </a>
         <section class="social_links">
           <a href="https://www.twitter.at/">
