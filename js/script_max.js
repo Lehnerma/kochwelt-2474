@@ -1,7 +1,7 @@
 let quantiy = document.getElementById("inp_quantity").value;
-let table = document.getElementById("recipe_body");
-let hamburgerMenu = document.getElementById("hamburger_menu");
-let tiramisu = [
+const table = document.getElementById("recipe_body");
+const hamburgerMenu = document.getElementById("hamburger_menu");
+const tiramisu = [
   { amount: 125, unit: "g", ingridient: "Mascarpone" },
   { amount: 25, unit: "g", ingridient: "Staubzucker" },
   { amount: 50, unit: "g", ingridient: "Biskotten" },
@@ -11,6 +11,7 @@ let tiramisu = [
   { amount: 0.5, unit: "EL", ingridient: "Amaretto oder nach Geschmack auch mehr" },
   { amount: 1, unit: "EL", ingridient: "Kakaopulver ungesüßt, zum bestreuen" },
 ];
+
 function getQuantity() {
   let value = document.getElementById("inp_quantity").value;
   if (value == "" || value == 0 || value >= 20 || value <= 0) {
@@ -20,6 +21,7 @@ function getQuantity() {
     return value;
   }
 }
+
 function getRecipe(factor) {
   factor = getQuantity();
   table.innerHTML = "";

@@ -2,7 +2,7 @@ const servingsButton = document.getElementById("servings_number_button");
 const servingsNumberInput = document.getElementById("servings_number_input");
 const mobileMenu = document.getElementById("mobile_nav_menu");
 const mobileMenuButton = document.getElementById("mobile_menu_button");
-const recipeOfTheDay = document.getElementById("recipe_of_the_day");
+//const recipeOfTheDay = document.getElementById("recipe_of_the_day");
 
 const amountPasta = document.getElementById("amount_pasta");
 const amountTomatoes = document.getElementById("amount_tomatoes");
@@ -25,7 +25,7 @@ servingsNumberInput.max = maxServings;
 
 
 
-recipeOfTheDay.href = setRecipeOfTheDay();
+// recipeOfTheDay.href = setRecipeOfTheDay();
 
 function calculateServings(ingredientsAmount) {
   return servingsNumberInput.value * ingredientsAmount;
