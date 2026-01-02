@@ -23,7 +23,7 @@ servingsNumberInput.min = minServings;
 const maxServings = 20;
 servingsNumberInput.max = maxServings;
 
-const recipeUrl = ["../recipe_tiramisu.html", "recipe_pasta_tomato.html"];
+
 
 recipeOfTheDay.href = setRecipeOfTheDay();
 
@@ -53,12 +53,4 @@ function handleEnterKeyPress(event) {
   }
 }
 
-function toggleMobileMenu() {
-  mobileMenu.classList.toggle("mobile_menu_box_closed");
-}
 
-function setRecipeOfTheDay() {
-  let randomNumber = Math.floor(Math.random() * recipeUrl.length);
-
-  return recipeUrl[randomNumber];
-}

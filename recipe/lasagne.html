@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
     <link rel="stylesheet" href="../main_style.css" />
-    <link rel="stylesheet" href="./style_adrian.css" />
     <script src="../js/script_adrian.js"></script>
     <title>Lasagne</title>
   </head>
@@ -24,7 +23,7 @@
         </div>
         <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
           <li><a href="../index.html">Start</a></li>
-          <li class="activ_link"><a href="./recipe_lasagne.html">Rezept des Tages</a></li>
+          <li class="activ_link"><a id="recipe_of_the_day">Rezept des Tages</a></li>
           <li><a href="../contact.html">Kontakt</a></li>
           <li><a href="../impressum.html">Impressum</a></li>
         </ul>
@@ -35,7 +34,7 @@
       <!-- /* -- Article: Lasagne -- */ -->
       <article class="top_container container">
         <h1>Lasagne</h1>
-        <div class="aot_img_adrian section" title="Image Lasagne"></div>
+        <img class="aot_img section" src="../assets/img/lasagne.jpg" alt="Image Lasagne" />
         <aside class="cards_container section">
           <section class="info_card" title="prepare time">
             <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
@@ -61,41 +60,40 @@
           <button class="btn_main btn_inp" onclick="getRecipe()">Portionen</button>
         </section>
 
-        <section class="ingredients container">
+        <section class="ingredients">
           <table class="recipe_table">
             <tbody class="recipe_body" id="recipe_body">
               <!-- Ingredients will be populated here by JavaScript -->
             </tbody>
           </table>
         </section>
+      </article>
         <!-- /* -- Preperation Section -- */ -->
-        <section class="instruction container">
+        <article class="instruction container">
           <h2>Zubereitung</h2>
+
           <aside class="cards_container">
             <div class="info_card">
               <img src="../assets/img/icons/av_time.svg" alt="watch" class="card_icon" />
-              <div class="info_card_discription">
-                <time datetime="PT2H" class="prepair_item">2 <abbr title="Stunden">Std.</abbr></time>
-                <p class="info_subdiscription">Gesamtzeit</p>
-              </div>
+              <time datetime="PT2H" class="prepair_item body_small">2 <abbr class="body_small" title="Stunden">Std.</abbr></time>
+              <p class="body_small">Gesamtzeit</p>
             </div>
 
             <div class="info_card">
               <img src="../assets/img/icons/hourglas.svg" alt="hourglass" class="card_icon" />
-              <div class="info_card_discription">
-                <time datetime="PT1H30M">1 <abbr title="Stunden">Std.</abbr> 30 <abbr title="Minuten">Min.</abbr></time>
-                <p class="info_subdiscription">Arbeitszeit</p>
-              </div>
+
+              <time class="body_small" datetime="PT1H30M">1 <abbr class="body_small" title="Stunden">Std.</abbr> 30 <abbr class="body_small" title="Minuten">Min.</abbr></time>
+              <p class="body_small">Arbeitszeit</p>
             </div>
 
             <div class="info_card">
               <img src="../assets/img/icons/snozze_time.svg" alt="snooze" class="card_icon" />
-              <div class="info_card_discription">
-                <time datetime="PT30M">30 <abbr title="Minuten">Min.</abbr></time>
-                <p class="info_subdiscription">Ruhezeit</p>
-              </div>
+
+              <time class="body_small" datetime="PT30M">30 <abbr class="body_small" title="Minuten">Min.</abbr></time>
+              <p class="info_subdiscription body_small">Ruhezeit</p>
             </div>
           </aside>
+
           <ol class="preperation_list">
             <li>Die Zwiebel und den Knoblauch schälen und fein hacken. In einer großen Pfanne das Olivenöl erhitzen und die Zwiebel und den Knoblauch darin glasig dünsten.</li>
             <li>Das Rinderhackfleisch hinzufügen und krümelig braten, bis es braun ist. Mit Salz, Pfeffer und italienischen Kräutern würzen.</li>
@@ -105,7 +103,7 @@
             <li>Den geriebenen Käse gleichmäßig über die oberste Schicht streuen. Die Lasagne im vorgeheizten Ofen etwa 30-40 Minuten backen, bis der Käse goldbraun und die Lasagne durchgegart ist.</li>
             <li>Die Lasagne vor dem Servieren etwa 30 Minuten ruhen lassen. In Stücke schneiden und genießen!</li>
           </ol>
-        </section>
+        </article>
       </article>
       <article class="container creator">
         <h3>Erstellt von:</h3>

@@ -1,6 +1,7 @@
 
 .aot_img_adrian  {
   height: 200px;
+  width: 100%;
   border-radius: var(--img_radius);
   background-image: url(../assets/img/lasagne.jpg);
   background-size: cover;

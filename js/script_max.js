@@ -53,8 +53,3 @@ function sendMail(event) {
       console.log(error);
     });
 }
-
-function toggleBurgerMenu() {
-  document.getElementById('hamburger_menu').classList.toggle("change");
-  document.getElementById("resp_nav").classList.toggle("resp_nav_closed");
-}

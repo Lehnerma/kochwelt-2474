@@ -420,6 +420,14 @@ tr {
 tr:nth-child(odd) {
   background: var(--grey-bg);
 }
+@media (max-width: 330px) {
+  .recipe_amount, .recipe_ingridient{
+    font-size: 0.9rem;
+  }
+  .recipe_amount{
+    width: 2em;
+  }
+}
 .recipe_amount {
   padding-right: 1em;
   width: 4em;
@@ -433,7 +441,7 @@ ol {
   flex-direction: column;
   gap: 16px;
 }
-ol li p {
+ol li p, .preperation_list li {
   text-align: justify;
 }
 .creator section {
