@@ -5,16 +5,15 @@ const recipeUrl = [
   "../recipe/pasta_tomato.html",
   "../recipe/chocolate_cake.html",
   "../recipe/lasagne.html",
-  "../recipe/karniyarik.html"];
+  "../recipe/karniyarik.html",
+];
+
+recipeOfTheDay.href = setRecipeOfTheDay();
 
 function setRecipeOfTheDay() {
   let randomNumber = Math.floor(Math.random() * recipeUrl.length);
   return recipeUrl[randomNumber];
 }
-
-recipeOfTheDay.href = setRecipeOfTheDay();
-
-
 
 function toggleBurgerMenu() {
   document.getElementById("hamburger_menu").classList.toggle("change");

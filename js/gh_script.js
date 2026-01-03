@@ -1,48 +1,52 @@
 const servingsButton = document.getElementById("servings_number_button");
 const servingsNumberInput = document.getElementById("servings_number_input");
-const mobileMenu = document.getElementById("mobile_nav_menu");
-const mobileMenuButton = document.getElementById("mobile_menu_button");
-//const recipeOfTheDay = document.getElementById("recipe_of_the_day");
+const ingredientsTable = document.getElementById("recipe_body");
 
-const amountPasta = document.getElementById("amount_pasta");
-const amountTomatoes = document.getElementById("amount_tomatoes");
-const amountTomatopaste = document.getElementById("amount_tomatopaste");
-const amountOil = document.getElementById("amount_oil");
-const amountOnions = document.getElementById("amount_onion");
-const amountGarlic = document.getElementById("amount_garlic");
-
-const pasta = 200;
-const tomato = 250;
-const tomatopaste = 0.5;
-const oil = 1;
-const onions = 0.5;
-const garlic = 0.5;
+const recipe = [
+  { name: "Nudeln", amount: 200, unit: "g" },
+  { name: "Tomaten", amount: 250, unit: "g" },
+  { name: "Tomatenmark", amount: 0.5, unit: "EL" },
+  { name: "Olivenöl", amount: 1, unit: "EL" },
+  { name: "Zwiebeln", amount: 0.5, unit: "Stk." },
+  { name: "Knoblauchzehe", amount: 0.5, unit: "Stk." },
+];
 
 const minServings = 1;
 servingsNumberInput.min = minServings;
 const maxServings = 20;
 servingsNumberInput.max = maxServings;
 
+function checkServingsNumber(servingsNumberValue) {
+  if (servingsNumberValue < minServings) {
+    return 1;
+  } else if (servingsNumberValue > maxServings) {
+    return 20;
+  } else {
+    return servingsNumberValue;
+  }
+}
 
-
-// recipeOfTheDay.href = setRecipeOfTheDay();
-
-function calculateServings(ingredientsAmount) {
-  return servingsNumberInput.value * ingredientsAmount;
+function calculateServings(servingsNumberValue, ingredientsAmount) {
+  return servingsNumberValue * ingredientsAmount;
 }
 
 function calculateIngredientsAmount() {
-  if (servingsNumberInput.value < minServings) {
-    servingsNumberInput.value = 1;
-  } else if (servingsNumberInput.value > maxServings) {
-    servingsNumberInput.value = 20;
-  } else {
-    amountPasta.textContent = calculateServings(pasta);
-    amountTomatoes.textContent = calculateServings(tomato);
-    amountTomatopaste.textContent = calculateServings(tomatopaste);
-    amountOil.textContent = calculateServings(oil);
-    amountOnions.textContent = calculateServings(onions);
-    amountGarlic.textContent = calculateServings(garlic);
+  let servings = checkServingsNumber(servingsNumberInput.value);
+  console.log(servings);
+
+  ingredientsTable.innerHTML = "";
+  for (let i = 0; i < recipe.length; i++) {
+    let row = `
+        <tr class="recipe_row">
+            <td class="recipe_amount">${calculateServings(
+              recipe[i].amount,
+              servings
+            )} 
+            ${recipe[i].unit} </td>
+            <td class="recipe_ingridient">${recipe[i].name}</td>
+        </tr>
+        `;
+    ingredientsTable.innerHTML += row;
   }
 }
 
@@ -52,5 +56,3 @@ function handleEnterKeyPress(event) {
     servingsNumberInput.blur();
   }
 }
-
-
