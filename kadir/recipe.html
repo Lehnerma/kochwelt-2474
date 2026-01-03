@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="recipe.html">
     <link rel="stylesheet" href="contact.html">
     <link rel="stylesheet" href="imprimt.html">
-
-    <script src="recipe.js"></script>
     
     <link rel="icon" type="image/png+xml" href="img/logo_small.png">
     <title>Rezeptseite</title>
 </head>
-<body>
+<body onload="amountCalculate()">
     <header>
         <nav class="menuboard">
             <div class="logo">
-                <img src="img/logo.png" alt="Logo mit Beschriftung">
+                <a href="index.html"><img src="img/logo.png" alt="Logo mit Beschriftung"></a>
             </div>
             <div class="menuTabs">
                 <ul>
@@ -40,14 +38,63 @@
                 <div class="karniyarikImg">
                     <img src="img/karniyarikLong.svg" alt="Karniyarik">
                 </div>
-            </div>
-            <div class="iconText">
-                <p><img src="img/clock-regular.svg" alt="">45 Min.</p>
-                <p><img src="img/brain-solid.svg" alt="">middle</p>
-                <p><img src="img/calendar-alt-regular.svg" alt="">28.12.2025</p>
+                <div class="iconText">
+                    <p><img src="img/clock-regular.svg" alt="">45 Min.</p>
+                    <p><img src="img/brain-solid.svg" alt="">middle</p>
+                    <p><img src="img/calendar-alt-regular.svg" alt="">28.12.2025</p>
+                </div>
             </div>
         </article>
-        <article></article>
+        <article class="tableContainer">
+            <div class="rezept">
+                <div class="anzahlZutaten">
+                    <span>Zutaten für <input type="number" id="serviceQuantity"
+                        name="service" onchange="amountCalculate()" min="1" max="20" onkeydown="enterKeyPress()"></span>
+                    <button id="serviceNumberButton" type="button" onclick="amountCalculate()" class="buttonPortion">Portionen</button>
+                </div>
+                <div class="tableRezept">
+                    <table>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Aubergine"></span></td>
+                            <td>Aubergine</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amount"><span id="amount_Hackfleisch"></span></td>
+                            <td> g Hackfleisch</td>
+                        </tr>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Zwiebel"></span></td>
+                            <td>kleine Zwiebel</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amount"><span id="amount_Tomate"></span></td>
+                            <td>kleine Tomate</td>
+                        </tr>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Paprika"></span></td>
+                            <td>kleine grüne Paprika</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amount"><span id="amount_Knoblauch"></span></td>
+                            <td>Knoblauchzehe</td>
+                        </tr>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Oel"></span></td>
+                            <td>EL Öl</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amountPositionRight">Salz, Pfeffer</td>
+                        </tr>
+                        <tr class="tableGrey">
+                            <td class="amountPositionRight">Paprikapulver</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amountPositionRight">Petersilie</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </article>
         <article class="userContainer">
             <div class="zubereitung">
                 <div class="h2">
@@ -58,8 +105,8 @@
                     <p><img src="img/clock-regular.svg" alt="">Gesamtzeit ca. 45 Minuten</p>
                 </div>
                 <span>
-                    Die Auberginen werden geschält, eingeschnitten und in Öl angebraten. <br>
-                    Hackfleisch mit Zwiebeln, Knoblauch, Tomaten und Gewürzen anbraten. <br>
+                    Die Auberginen werden geschält, eingeschnitten und in Öl angebraten. 
+                    Hackfleisch mit Zwiebeln, Knoblauch, Tomaten und Gewürzen anbraten.
                     Auberginen füllen, in eine Form legen, mit Tomatensauce übergießen und im Ofen garen.
                 </span>
             </div>
@@ -80,9 +127,10 @@
             <div class="footerIcons">
                 <img src="/img/instagram_logo.svg" alt="Instagram">
                 <img src="/img/facebook_logo.svg" alt="Facebook">
-                <img src="/img/tripadvisor_logo.svg" alt="Tripadvisor">
+                <img class="x" src="/img/x.svg" alt="X">
             </div>
         </nav>
     </footer>
+    <script src="recipe.js"></script>
 </body>
 </html>

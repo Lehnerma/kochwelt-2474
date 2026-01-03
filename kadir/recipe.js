@@ -1,17 +1,45 @@
-let value = ["Aubergine", "g Hackfleisch", "kleine Zwiebel", "kleine Tomate", "kleine grüne Paprika", "Knoblauchzehe", "EL Öl", "Salz, Pfeffer", "Paprikapulver", "Petersilie"];
-let amout = [1, 100, 1, 1, 1, 1,];
-let portion = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let amounts = [1, 100, 1, 1, 1, 1, 1];
+let quantity = document.getElementById("serviceQuantity");
 
-function amoutPortion() {
-    for(let i = 0; i < portion.length; i++){
-        let sum = portion[i];
-        amout += sum;
-    }
-    return amout;
+let amountElements = [
+    document.getElementById("amount_Aubergine"),
+    document.getElementById("amount_Hackfleisch"),
+    document.getElementById("amount_Zwiebel"),
+    document.getElementById("amount_Tomate"),
+    document.getElementById("amount_Paprika"),
+    document.getElementById("amount_Knoblauch"),
+    document.getElementById("amount_Oel")
+];
+
+let minService = 1;
+let maxService = 20;
+
+quantity.min = minService;
+quantity.max = maxService;
+
+function serviceCalculator(ingredientsAmount) {
+    return quantity.value * ingredientsAmount;
 }
 
-function ingredients() {
-    for(let i = 0; i < value.length; i++){
+function amountCalculate() {
+    let value = Number(quantity.value);
 
+    if(value < minService) value = minService;
+    if(value > maxService) value = maxService;
+
+    quantity.value = value;
+
+    amountElements.forEach((el, index) => {
+        el.textContent = serviceCalculator(amounts[index]);
+    });
+}
+
+function enterKeyPress(event) {
+    if(event.key == "Enter"){
+        amountCalculate();
+        quantity.blur();
     }
 }
+
+console.log(quantity);
+console.log(amountElements);
