@@ -1,4 +1,5 @@
 const recipeOfTheDay = document.getElementById("recipe_of_the_day");
+const recipeOfTheDayBtn = document.getElementById("recipe_of_the_day_btn")
 
 const recipeUrl = [
   "../recipe/tiramisu.html",
@@ -9,6 +10,7 @@ const recipeUrl = [
 ];
 
 recipeOfTheDay.href = setRecipeOfTheDay();
+recipeOfTheDayBtn.href = setRecipeOfTheDay();
 
 function setRecipeOfTheDay() {
   let randomNumber = Math.floor(Math.random() * recipeUrl.length);

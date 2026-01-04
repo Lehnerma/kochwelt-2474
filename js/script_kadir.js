@@ -2,15 +2,7 @@ let amounts = [1, 100, 1, 1, 1, 1, 1];
 let crowd = ["Stk", "g", "Stk", "Stk", "Stk", "Stk", "EL"];
 let quantity = document.getElementById("serviceQuantity");
 
-let amountElements = [
-    document.getElementById("amount_Aubergine"),
-    document.getElementById("amount_Hackfleisch"),
-    document.getElementById("amount_Zwiebel"),
-    document.getElementById("amount_Tomate"),
-    document.getElementById("amount_Paprika"),
-    document.getElementById("amount_Knoblauch"),
-    document.getElementById("amount_Oel")
-];
+let amountElements = [document.getElementById("amount_Aubergine"), document.getElementById("amount_Hackfleisch"), document.getElementById("amount_Zwiebel"), document.getElementById("amount_Tomate"), document.getElementById("amount_Paprika"), document.getElementById("amount_Knoblauch"), document.getElementById("amount_Oel")];
 
 let minService = 1;
 let maxService = 20;
@@ -19,35 +11,30 @@ quantity.min = minService;
 quantity.max = maxService;
 
 function serviceCalculator(ingredientsAmount, ingredientsCrowd) {
-    let sum = quantity.value * ingredientsAmount
-    let value = ingredientsCrowd;
-    return [sum + " " + value];
+  let sum = quantity.value * ingredientsAmount;
+  let value = ingredientsCrowd;
+  return [sum + " " + value];
 }
 
 function amountCalculate() {
-    let value = Number(quantity.value);
+  let value = Number(quantity.value);
 
-    if(value < minService) value = minService;
-    if(value > maxService) value = maxService;
+  if (value < minService) value = minService;
+  if (value > maxService) value = maxService;
 
-    quantity.value = value;
+  quantity.value = value;
 
-    amountElements.forEach((el, index) => {
-        el.textContent = serviceCalculator(amounts[index], crowd[index]);
-    });
+  amountElements.forEach((el, index) => {
+    el.textContent = serviceCalculator(amounts[index], crowd[index]);
+  });
 }
 
 function enterKeyPress(event) {
-    if(event.key == "Enter"){
-        amountCalculate();
-        quantity.blur();
-    }
+  if (event.key == "Enter") {
+    amountCalculate();
+    quantity.blur();
+  }
 }
 
 console.log(quantity);
 console.log(amountElements);
-
-function toggleBurgerMenu() {
-  document.getElementById("hamburger_menu").classList.toggle("change");
-  document.getElementById("resp_nav").classList.toggle("resp_nav_closed");
-}

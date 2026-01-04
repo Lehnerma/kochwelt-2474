@@ -152,7 +152,7 @@ nav ul {
 }
 nav ul li {
   list-style: none;
-  transition: line-height 150ms ease-in-out;
+  transition: line-height 125ms ease-in-out;
 }
 nav ul li a {
   text-underline-offset: 0.4em;
@@ -420,10 +420,11 @@ tr:nth-child(odd) {
   background: var(--grey-bg);
 }
 @media (max-width: 330px) {
-  .recipe_amount, .recipe_ingridient{
+  .recipe_amount,
+  .recipe_ingridient {
     font-size: 0.9rem;
   }
-  .recipe_amount{
+  .recipe_amount {
     width: 2em;
   }
 }
@@ -440,11 +441,12 @@ ol {
   flex-direction: column;
   gap: 16px;
 }
-ol li p, .preperation_list li {
+ol li p,
+.preperation_list li {
   text-align: justify;
 }
 
-.text_instruction{
+.text_instruction {
   text-align: justify;
 }
 
@@ -535,7 +537,7 @@ footer article section {
 .footer_social_icon {
   width: 3em;
 }
-.footer_social_icon:hover{
+.footer_social_icon:hover {
   filter: brightness(130%);
 }
 @media (max-width: 570px) {
@@ -582,7 +584,6 @@ sendt mail
   padding: 0.5em;
 }
 
-
 @media (max-width: 570px) {
   main {
     margin: 0.5em;
@@ -590,5 +591,8 @@ sendt mail
   .container {
     padding-left: 0.5em;
     padding-right: 0.5em;
+  }
+  .landing_container{
+    padding: 0.1em;
   }
 }

@@ -5,8 +5,8 @@ const tiramisu = [
   { amount: 125, unit: "g", ingridient: "Mascarpone" },
   { amount: 25, unit: "g", ingridient: "Staubzucker" },
   { amount: 50, unit: "g", ingridient: "Biskotten" },
-  { amount: 1, unit: "stk", ingridient: "Eigelb" },
-  { amount: 0.5, unit: "stk", ingridient: "Eiweiß" },
+  { amount: 1, unit: "Stk", ingridient: "Eigelb" },
+  { amount: 0.5, unit: "Stk", ingridient: "Eiweiß" },
   { amount: 1, unit: "Tasse", ingridient: "Kaffee abgekühlt" },
   { amount: 0.5, unit: "EL", ingridient: "Amaretto oder nach Geschmack auch mehr" },
   { amount: 1, unit: "EL", ingridient: "Kakaopulver ungesüßt, zum bestreuen" },
@@ -49,7 +49,7 @@ function sendMail(event) {
     },
   })
     .then(() => {
-      window.location.href = "mail_sendt.html"; // landing page after submit
+      window.location.href = "./mail_sendt.html"; // landing page after submit
     })
     .catch((error) => {
       console.log(error);

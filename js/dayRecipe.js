@@ -12,9 +12,9 @@ let dayRecipes = [
     recipe: "../recipe/pasta_tomato.html",
     descrip: "Diese Tomaten-Pasta ist der Inbegriff von schneller, ehrlicher Küche mit Fokus auf frische Zutaten. Saftige Tomaten werden mit Olivenöl, Knoblauch und aromatischem Basilikum zu einer leichten Sauce eingekocht. Zusammen mit al dente gekochten Nudeln entsteht ein Gericht, das nach Sommer in Italien schmeckt. Frisch geriebener Parmesan runden das Aroma perfekt ab.",
   },
-  { title: "Karniyarik", img: "./assets/img/profil.png", recipe: "../recipe/karniyarik.html", descrip: "Karniyarik ist ein Klassiker der türkischen Küche, bei dem sanft gebratene Auberginen mit einer würzigen Hackfleisch-Gemüse-Mischung gefüllt werden. Die Kombination aus weicher Aubergine, Tomaten, Paprika und orientalischen Gewürzen sorgt für eine wahre Geschmacksexplosion." },
+  { title: "Karniyarik", img: "./assets/img/karniyarikLong.svg", recipe: "../recipe/karniyarik.html", descrip: "Karniyarik ist ein Klassiker der türkischen Küche, bei dem sanft gebratene Auberginen mit einer würzigen Hackfleisch-Gemüse-Mischung gefüllt werden. Die Kombination aus weicher Aubergine, Tomaten, Paprika und orientalischen Gewürzen sorgt für eine wahre Geschmacksexplosion." },
   {
-    title: "Schoko Kuchen",
+    title: "Torta morbide",
     img: "./assets/img/choco_cake.jpg",
     recipe: "../recipe/chocolate_cake.html",
     descrip: "Dieser Schokokuchen ist ein Traum für alle Genießer – außen leicht knusprig und innen herrlich saftig. Hochwertiger Kakao oder geschmolzene Zartbitterschokolade verleihen ihm ein intensives Aroma, das nicht zu süß ist. Er ist im Handumdrehen gebacken und eignet sich perfekt für den Nachmittagskaffee.",

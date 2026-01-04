@@ -11,22 +11,10 @@
     <header>
       <nav>
         <a href="../index.html" title="Kochwelt">
-          <img
-            src="../assets/img/logo.png"
-            alt="Kochwelt Logo"
-            class="logo_full"
-          />
-          <img
-            src="../assets/img/logo_small.png"
-            alt="Kochwelt Logo"
-            class="logo_short"
-          />
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
+          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
         </a>
-        <div
-          class="bar_container"
-          id="hamburger_menu"
-          onclick="toggleBurgerMenu()"
-        >
+        <div class="bar_container" id="hamburger_menu" onclick="toggleBurgerMenu()">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
@@ -44,63 +32,27 @@
     <main>
       <article class="top_container container">
         <h1>Nudeln mit Tomatensoße</h1>
-        <img
-          class="aot_img"
-          src="../assets/img/pasta.jpg"
-          alt="Spirelli Nudeln mit leckerer Tomatensoße und Feldsalat on top"
-        />
+        <img class="aot_img" src="../assets/img/pasta.jpg" alt="Spirelli Nudeln mit leckerer Tomatensoße und Feldsalat on top" />
         <aside class="cards_container">
           <section class="info_card" title="prepare time">
-            <img
-              src="../assets/img/icons/clock-regular.svg"
-              alt="Uhr Icon"
-              class="card_icon"
-            />
+            <img src="../assets/img/icons/clock-regular.svg" alt="Uhr Icon" class="card_icon" />
             <p class="card_discription body_small">30 Min</p>
           </section>
           <section class="info_card" title="difficult">
-            <img
-              src="../assets/img/icons/brain-solid.svg"
-              alt="Gehirn Icon"
-              class="card_icon"
-            />
+            <img src="../assets/img/icons/brain-solid.svg" alt="Gehirn Icon" class="card_icon" />
             <p class="card_discription body_small">simpel</p>
           </section>
           <section class="info_card" title="creation date">
-            <img
-              src="../assets/img/icons/calendar-alt-regular.svg"
-              alt="Kalenderblatt Icon"
-              class="card_icon"
-            />
+            <img src="../assets/img/icons/calendar-alt-regular.svg" alt="Kalenderblatt Icon" class="card_icon" />
             <p class="card_discription body_small">26.12.2025</p>
           </section>
         </aside>
       </article>
       <article class="ingredients_container container">
         <div class="separetor" title="separetor"></div>
-        <section
-          class="quantity_container"
-          title="Quantity for dishes"
-          id="serving_form"
-        >
-          <label for="servings_number">Zutaten für</label
-          ><input
-            id="servings_number_input"
-            class="inp_field"
-            name="servings_number"
-            type="number"
-            value="2"
-            onchange="calculateIngredientsAmount()"
-            onkeydown="handleEnterKeyPress(event)"
-          />
-          <button
-            id="servings_number_button"
-            class="btn_main btn_inp"
-            type="button"
-            onclick="calculateIngredientsAmount()"
-          >
-            Portionen
-          </button>
+        <section class="quantity_container" title="Quantity for dishes" id="serving_form">
+          <label for="servings_number">Zutaten für</label><input id="servings_number_input" class="inp_field" name="servings_number" type="number" value="2" placeholder="1" min: "1"; max: "20" onchange="calculateIngredientsAmount()" onkeydown="handleEnterKeyPress(event)" />
+          <button id="servings_number_button" class="btn_main btn_inp" type="button" onclick="calculateIngredientsAmount()">Portionen</button>
         </section>
         <table class="recipe_table">
           <tbody class="recipe_body" id="recipe_body"></tbody>
@@ -110,42 +62,20 @@
         <h2>Zubereitung</h2>
         <aside class="cards_container">
           <div class="info_card">
-            <img
-              src="../assets/img/icons/clock-regular.svg"
-              alt="Uhr Icon"
-              class="card_icon"
-            /><time datetime="time"
-              >20 <abbr title="Minuten" class="body_small">Min.</abbr></time
-            >
+            <img src="../assets/img/icons/clock-regular.svg" alt="Uhr Icon" class="card_icon" /><time datetime="time">20 <abbr title="Minuten" class="body_small">Min.</abbr></time>
             <p class="body_small">Arbeitszeit</p>
           </div>
           <div class="info_card">
-            <img
-              src="../assets/img/icons/clock-regular.svg"
-              alt="Uhr Icon"
-              class="card_icon"
-            /><time datetime="time" class="body_small"
-              >30 <abbr title="Stunden" class="body_small">Min.</abbr></time
-            >
+            <img src="../assets/img/icons/clock-regular.svg" alt="Uhr Icon" class="card_icon" /><time datetime="time" class="body_small">30 <abbr title="Stunden" class="body_small">Min.</abbr></time>
             <p class="body_small">Gesamt</p>
           </div>
         </aside>
-        <p>
-          Die Spaghetti bissfest kochen. In der Zeit die Zwiebel hacken und im
-          Kochtopf bei mittlerer Hitze mit Öl andünsten, sodann mit den
-          passierten Tomaten ablöschen. Während die Soße heiß wird, mit
-          Tomatenmark, Salz und Pfeffer abschmecken. Die abgegossenen Spaghetti
-          mit der Soße und frisch geriebenem Parmesan servieren.
-        </p>
+        <p>Die Spaghetti bissfest kochen. In der Zeit die Zwiebel hacken und im Kochtopf bei mittlerer Hitze mit Öl andünsten, sodann mit den passierten Tomaten ablöschen. Während die Soße heiß wird, mit Tomatenmark, Salz und Pfeffer abschmecken. Die abgegossenen Spaghetti mit der Soße und frisch geriebenem Parmesan servieren.</p>
       </article>
       <article class="creator container">
         <h3>Rezept erstellt von:</h3>
         <section>
-          <img
-            src="../assets/img/guhe_img.jpg"
-            alt="image recipe creator"
-            class="img_creator"
-          />
+          <img src="../assets/img/guhe_img.jpg" alt="image recipe creator" class="img_creator" />
           <p>Günter</p>
         </section>
       </article>
@@ -153,38 +83,18 @@
     <footer>
       <article>
         <a href="../index.html" title="Kochwelt" class="logo_footer">
-          <img
-            src="../assets/img/logo.png"
-            alt="Kochwelt Logo"
-            class="logo_full"
-          />
-          <img
-            src="../assets/img/logo_small.png"
-            alt="Kochwelt Logo"
-            class="logo_short"
-          />
+          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
+          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
         </a>
         <section class="social_links">
-          <a href="https://www.twitter.at/">
-            <img
-              src="../assets/img/social-icons/twitter_bird.png"
-              alt="Twitter Logo und Link"
-              class="footer_social_icon"
-            />
+          <a href="https://x.com/?lang=de">
+            <img src="../assets/img/social-icons/twitter_bird.png" alt="Twitter Logo und Link" class="footer_social_icon" />
           </a>
           <a href="https://www.facebook.com/?locale=de_DE">
-            <img
-              src="../assets/img/social-icons/facebook_logo.png"
-              alt="Facebook Logo und Link"
-              class="footer_social_icon"
-            />
+            <img src="../assets/img/social-icons/facebook_logo.png" alt="Facebook Logo und Link" class="footer_social_icon" />
           </a>
           <a href="https://www.instagram.com/">
-            <img
-              src="../assets/img/social-icons/instagrram_logo.png"
-              alt="Instagram Logo und Link"
-              class="footer_social_icon"
-            />
+            <img src="../assets/img/social-icons/instagrram_logo.png" alt="Instagram Logo und Link" class="footer_social_icon" />
           </a>
         </section>
       </article>
