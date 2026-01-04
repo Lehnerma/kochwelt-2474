@@ -56,7 +56,7 @@
             <div class="separetor" title="separetor"></div>
             <section class="quantity_container" title="Quantity for dishes">
                 <label for="inp_quantity" class="inp_label">Zutaten für: </label>
-                <input type="number" min="1" max="20" value="1" pattern="09" placeholder="1" id="serviceQuantity" class="inp_field" onchange="amountCalculate()" onkeydown="enterKeyPress()" />
+                <input type="number" min="1" max="20" value="1" pattern="09" placeholder="1" id="serviceQuantity" class="inp_field" oninput="amountCalculate()" onkeydown="enterKeyPress()" />
                 <button class="btn_main btn_inp" onclick="amountCalculate()">Portionen</button>
             </section>
 

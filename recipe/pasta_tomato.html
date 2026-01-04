@@ -51,7 +51,7 @@
       <article class="ingredients_container container">
         <div class="separetor" title="separetor"></div>
         <section class="quantity_container" title="Quantity for dishes" id="serving_form">
-          <label for="servings_number">Zutaten für</label><input id="servings_number_input" class="inp_field" name="servings_number" type="number" value="2" placeholder="1" min: "1"; max: "20" onchange="calculateIngredientsAmount()" onkeydown="handleEnterKeyPress(event)" />
+          <label for="servings_number">Zutaten für</label><input id="servings_number_input" class="inp_field" name="servings_number" type="number" value="2" placeholder="1" min: "1"; max: "20" oninput="calculateIngredientsAmount()" onkeydown="handleEnterKeyPress(event)" />
           <button id="servings_number_button" class="btn_main btn_inp" type="button" onclick="calculateIngredientsAmount()">Portionen</button>
         </section>
         <table class="recipe_table">
