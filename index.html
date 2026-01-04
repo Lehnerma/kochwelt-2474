@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main_style.css" />
     <title>Kochwelt</title>
   </head>
-  <body>
+  <body onload="setDayRecipe()">
     <header>
       <nav>
         <a href="./index.html" title="Kochwelt">
@@ -21,43 +21,43 @@
         </div>
         <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
           <li class="activ_link"><a href="./index.html">Start</a></li>
-          <li class=""><a href="./recipe_tiramisu.html">Rezept des Tages</a></li>
-          <li><a href="./contact.html">Kontakt</a></li>
-          <li><a href="#">Impressum</a></li>
+          <li class=""><a id="recipe_of_the_day">Rezept des Tages</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <article class="aot container">
-        <img src="../assets/img/tiramisu.jpg" alt="Tiramisu" class="recipe_day" />
+        <img src="../assets/img/tiramisu.jpg" alt="Tiramisu" class="recipe_day" id="dayRecipeImg" />
         <section class="img_description body_small">
-          <h2>Tiramisu</h2>
-          <p>Hol dir ein klein wenig Italien zu dir nachhause. Mit einem der bekanntesten Desserts die es aus dem sonnigen Italien gibt. Der cremige, leicht Mandelige Geschmack wird dich und deine Gäste begeistern.</p>
+          <h2 id="dayRecipeTitle">Tiramisu</h2>
+          <p id="dayRecipeDescrip">Hol dir ein klein wenig Italien zu dir nachhause. Mit einem der bekanntesten Desserts die es aus dem sonnigen Italien gibt. Der cremige, leicht Mandelige Geschmack wird dich und deine Gäste begeistern.</p>
           <div class="btn-bottom">
-            <a href="./recipe_tiramisu.html" class="btn_main">zum Rezept</a>
+            <a href="./recipe_tiramisu.html" class="btn_main" id="dayRecipeLink">zum Rezept</a>
           </div>
         </section>
       </article>
       <article class="recipes">
         <h2>Lust auf was Neues?</h2>
         <section class="recipes_cards">
-          <a class="recipe_card" href="./adrian/recipe_lasagne.html">
+          <a class="recipe_card" href="./recipe/lasagne.html">
             <img src="./assets/img/lasagne.jpg" alt="Lasagne" />
             <h4>Lasagne</h4>
           </a>
-          <a class="recipe_card" href="./gh/recipe_pasta_tomato.html">
-            <img src="./gh/img/pasta.jpg" alt="Tomaten-Pasta" />
+          <a class="recipe_card" href="./recipe/pasta_tomato.html">
+            <img src="./assets/img/pasta.jpg" alt="Tomaten-Pasta" />
             <h4>Tomaten-Pasta</h4>
           </a>
           <a class="recipe_card" href="./kadir/recipe.html">
             <img src="../assets/img/tiramisu.jpg" alt="Karniyarik" />
             <h4>Karniyarik</h4>
           </a>
-          <a class="recipe_card" href="./Sefa_GIT Kochwelt/chocolate_cake_sefa.html">
-            <img src="./Sefa_GIT Kochwelt/img/cake.jpg" alt="Schokoladenkuchen" />
-            <h4>Schoko Kuchen</h4>
+          <a class="recipe_card" href="./recipe/chocolate_cake.html">
+            <img src="./assets/img/choco_cake.jpg" alt="Schokoladenkuchen" />
+            <h4>Torta morbide</h4>
           </a>
-          <a class="recipe_card" href="./recipe_tiramisu.html">
+          <a class="recipe_card" href="./recipe/tiramisu.html">
             <img src="../assets/img/tiramisu.jpg" alt="Tiramisu" />
             <h4>Tiramisu</h4>
           </a>
@@ -65,7 +65,7 @@
       </article>
       <article class="blog container">
         <aside>
-          <h2>Kaffee: Arabica oder Robusta</h2>
+          <h2>Kaffee: Arabica oder Robusta ?</h2>
           <p>Arabica und Robusta sind die zwei Hauptkaffeesorten: Arabica ist milder, fruchtiger und aromatischer mit weniger Koffein, wächst in höheren Lagen und ist empfindlicher. Robusta ist kräftiger, bitterer mit nussigen/erdigen Noten, hat fast doppelt so viel Koffein, ist widerstandsfähiger und eignet sich gut für Espresso und starke Crema, gedeiht aber in tieferen Lagen.</p>
         </aside>
         <img src="../assets/img/coffee_blog.jpg" alt="Kaffeetasse mit Kaffeebohnen" class="img_blog" />
@@ -90,6 +90,8 @@
         </section>
       </article>
     </footer>
-    <script src="script_max.js"></script>
+    <!-- <script src="./js/script_max.js"></script> -->
+     <script src="./js/dayRecipe.js"></script>
+    <script src="./js/header.js"></script>
   </body>
 </html>

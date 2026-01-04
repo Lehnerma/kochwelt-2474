@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../main_style.css" />
-    <script src="gh_script.js" defer></script>
-    <script src="../max/script_max.js"></script>
     <title>Kochwelt - Nudeln mit Tomatensoße</title>
     <link rel="icon" href="../assets/img/logo_small.png" type="image/png" />
   </head>
   <body onload="calculateIngredientsAmount()">
     <header>
       <nav>
-        <a href="./index.html" title="Kochwelt">
+        <a href="../index.html" title="Kochwelt">
           <img
             src="../assets/img/logo.png"
             alt="Kochwelt Logo"
@@ -34,12 +32,12 @@
           <div class="bar3"></div>
         </div>
         <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
-          <li><a href="./index.html">Start</a></li>
+          <li><a href="../index.html">Start</a></li>
           <li class="activ_link">
             <a id="recipe_of_the_day">Rezept des Tages</a>
           </li>
-          <li><a href="./contact.html">Kontakt</a></li>
-          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="../contact.html">Kontakt</a></li>
+          <li><a href="../impressum.html">Impressum</a></li>
         </ul>
       </nav>
     </header>
@@ -48,7 +46,7 @@
         <h1>Nudeln mit Tomatensoße</h1>
         <img
           class="aot_img"
-          src="img/pasta.jpg"
+          src="../assets/img/pasta.jpg"
           alt="Spirelli Nudeln mit leckerer Tomatensoße und Feldsalat on top"
         />
         <aside class="cards_container">
@@ -79,6 +77,7 @@
         </aside>
       </article>
       <article class="ingredients_container container">
+        <div class="separetor" title="separetor"></div>
         <section
           class="quantity_container"
           title="Quantity for dishes"
@@ -87,6 +86,7 @@
           <label for="servings_number">Zutaten für</label
           ><input
             id="servings_number_input"
+            class="inp_field"
             name="servings_number"
             type="number"
             value="2"
@@ -102,31 +102,8 @@
             Portionen
           </button>
         </section>
-        <table class="recipe_ingredients">
-          <tr>
-            <td><span id="amount_pasta"></span> g Nudeln</td>
-          </tr>
-          <tr>
-            <td><span id="amount_tomatoes"></span> g passierte Tomaten</td>
-          </tr>
-          <tr>
-            <td><span id="amount_tomatopaste"></span> EL Tomatenmark</td>
-          </tr>
-          <tr>
-            <td><span id="amount_oil"></span> EL Olivenöl</td>
-          </tr>
-          <tr>
-            <td><span id="amount_onion"></span> Zwiebel(n)</td>
-          </tr>
-          <tr>
-            <td><span id="amount_garlic"></span> Knoblauchzehe(n)</td>
-          </tr>
-          <tr>
-            <td>Salz und Pfeffer</td>
-          </tr>
-          <tr>
-            <td>Parmesan oder beliebiger Käse</td>
-          </tr>
+        <table class="recipe_table">
+          <tbody class="recipe_body" id="recipe_body"></tbody>
         </table>
       </article>
       <article class="instruction container">
@@ -165,7 +142,7 @@
         <h3>Rezept erstellt von:</h3>
         <section>
           <img
-            src="../assets/img/profile.png"
+            src="../assets/img/guhe_img.jpg"
             alt="image recipe creator"
             class="img_creator"
           />
@@ -175,7 +152,7 @@
     </main>
     <footer>
       <article>
-        <a href="./index.html" title="Kochwelt" class="logo_footer">
+        <a href="../index.html" title="Kochwelt" class="logo_footer">
           <img
             src="../assets/img/logo.png"
             alt="Kochwelt Logo"
@@ -212,5 +189,7 @@
         </section>
       </article>
     </footer>
+    <script src="../js/gh_script.js"></script>
+    <script src="../js/header.js"></script>
   </body>
 </html>
