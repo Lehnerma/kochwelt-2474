@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="recipe.css">
-    <link rel="stylesheet" href="recipe.html">
-    <link rel="stylesheet" href="contact.html">
-    <link rel="stylesheet" href="imprimt.html">
+<!--    <link rel="stylesheet" href="../css/style_kadir.css">-->
+    <link rel="stylesheet" href="../main_style.css">
     
     <link rel="icon" type="image/png+xml" href="assets/img/logo_small.png">
     <title>Karniyarik</title>
@@ -15,7 +13,7 @@
 <body onload="amountCalculate()">
     <header>
         <nav>
-            <a href="./index.html" title="Kochwelt">
+            <a href="../index.html" title="Kochwelt">
                 <img src="/assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
                 <img src="/assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
             </a>
@@ -25,10 +23,10 @@
                 <div class="bar3"></div>
             </div>
             <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
-                <li><a href="index.html">Start</a></li>
-                <li class="activ_link"><a id="recipe.html">Rezept des Tages</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="imprimt.html">Impressum</a></li>
+                <li><a href="../index.html">Start</a></li>
+                <li class="activ_link"><a id="recipe_of_the_day.html">Rezept des Tages</a></li>
+                <li><a href="../contact.html">Kontakt</a></li>
+                <li><a href="../impressum.html">Impressum</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +34,7 @@
     <main>
         <article class="top_container container">
             <h1>Karniyarik</h1>
-            <div class="aot_img" title="Background Image Karniyarik"></div>
+            <img class="aot_img" src="../assets/img/karniyarikLong.svg" alt="Karniyarik">
             <aside class="cards_container">
                 <section class="info_card" title="prepare time">
                     <img src="/assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
@@ -65,33 +63,33 @@
             <section class="ingredients">
                 <div class="tableRezept">
                     <table>
-                        <tr class="tableGrey">
-                            <td class="amount"><span id="amount_Aubergine"></span></td>
-                            <td>Aubergine</td>
+                        <tr>
+                            <td class="recipe_amount"><span id="amount_Aubergine"></span></td>
+                            <td class="recipe_ingridient">Aubergine</td>
                         </tr>
-                        <tr class="tableWhite">
-                            <td class="amount"><span id="amount_Hackfleisch"></span></td>
-                            <td>Hackfleisch</td>
+                        <tr>
+                            <td class="recipe_amount"><span id="amount_Hackfleisch"></span></td>
+                            <td class="recipe_ingridient">Hackfleisch</td>
                         </tr>
-                        <tr class="tableGrey">
-                            <td class="amount"><span id="amount_Zwiebel"></span></td>
-                            <td>kleine Zwiebel</td>
+                        <tr>
+                            <td class="recipe_amount"><span id="amount_Zwiebel"></span></td>
+                            <td class="recipe_ingridient">kleine Zwiebel</td>
                         </tr>
-                        <tr class="tableWhite">
-                            <td class="amount"><span id="amount_Tomate"></span></td>
-                            <td>kleine Tomate</td>
+                        <tr>
+                            <td class="recipe_amount"><span id="amount_Tomate"></span></td>
+                            <td class="recipe_ingridient">kleine Tomate</td>
                         </tr>
-                        <tr class="tableGrey">
-                            <td class="amount"><span id="amount_Paprika"></span></td>
-                            <td>kleine grüne Paprika</td>
+                        <tr>
+                            <td class="recipe_amount"><span id="amount_Paprika"></span></td>
+                            <td class="recipe_ingridient">kleine grüne Paprika</td>
                         </tr>
-                        <tr class="tableWhite">
-                            <td class="amount"><span id="amount_Knoblauch"></span></td>
-                            <td>Knoblauchzehe</td>
+                        <tr>
+                            <td class="recipe_amount"><span id="amount_Knoblauch"></span></td>
+                            <td class="recipe_ingridient">Knoblauchzehe</td>
                         </tr>
-                        <tr class="tableGrey">
-                            <td class="amount"><span id="amount_Oel"></span></td>
-                            <td>Öl</td>
+                        <tr>
+                            <td class="recipe_amount"><span id="amount_Oel"></span></td>
+                            <td class="recipe_ingridient">Öl</td>
                         </tr>
                     </table>
                 </div>
@@ -114,24 +112,21 @@
                     </div>
                 </div>
             </aside>
-            <span>
-                <strong>Karniyarik ist ein klassisches türkisches Gericht mit gefüllten Auberginen.</strong> <br>
-                <br>
-                Zuerst Auberginen längs einschneiden, salzen und kurz ruhen lassen. <br>
-                Danach abspülen, trocknen und in Öl anbraten. Für die Füllung Zwiebeln, Knoblauch und
-                Hackfleisch anbraten, Tomaten, Paprika, Salz, Pfeffer und Paprikapulver zugeben. <br>
-                Auberginen öffnen, mit der Mischung füllen und in eine Form legen. Tomatensauce angießen,
-                bei 180 Grad etwa 30 Minuten backen. Mit Reis oder Brot servieren. <br> 
-                Traditionell wird das Gericht mit frischer Petersilie garniert und schmeckt am nächsten Tag <br>
-                noch intensiver, weil sich die Aromen verbinden und die Auberginen besonders
-                saftig und würzig bleiben, ideal für ein gemütliches Familienessen am Wochenende. <br>
-            </span>
+            <ol class="preperation_list">
+                <li>Karniyarik ist ein klassisches türkisches Gericht mit gefüllten Auberginen.</li>
+                <li>Zuerst Auberginen längs einschneiden, salzen und kurz ruhen lassen.</li>
+                <li>Hackfleisch anbraten, Tomaten, Paprika, Salz, Pfeffer und Paprikapulver zugeben.</li>
+                <li>Auberginen öffnen, mit der Mischung füllen und in eine Form legen. Tomatensauce angießen, bei 180 Grad etwa 30 Minuten backen. Mit Reis oder Brot servieren.</li>
+                <li>Traditionell wird das Gericht mit frischer Petersilie garniert und schmeckt am nächsten Tag 
+                    noch intensiver, weil sich die Aromen verbinden und die Auberginen besonders
+                    saftig und würzig bleiben, ideal für ein gemütliches Familienessen am Wochenende.</li>
+            </ol>
         </article>
 
         <article class="container creator">
             <h3>Rezept erstellt von:</h3>
             <section>
-                <img src="/assets/img/profile.png" alt="account-pic" class="img_creator"/>
+                <img src="/assets/img/kadir.svg" alt="account-pic" class="img_creator"/>
                 <p>Kadir Kahraman</p>
             </section>
         </article> 
@@ -155,6 +150,6 @@
             </section>
         </article>
     </footer>
-    <script src="recipe.js"></script>
+    <script src="../js/script_kadir.js"></script>
 </body>
 </html>

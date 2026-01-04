@@ -1,5 +1,5 @@
 let amounts = [1, 100, 1, 1, 1, 1, 1];
-let crowd = ["stk", "g", "stk", "stk", "stk", "stk", "EL"];
+let crowd = ["Stk", "g", "Stk", "Stk", "Stk", "Stk", "EL"];
 let quantity = document.getElementById("serviceQuantity");
 
 let amountElements = [
