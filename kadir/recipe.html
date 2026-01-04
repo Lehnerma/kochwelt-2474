@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="recipe.css">
+    <link rel="stylesheet" href="recipe.html">
+    <link rel="stylesheet" href="contact.html">
+    <link rel="stylesheet" href="imprimt.html">
+    
+    <link rel="icon" type="image/png+xml" href="assets/img/logo_small.png">
+    <title>Karniyarik</title>
+</head>
+<body onload="amountCalculate()">
+    <header>
+        <nav>
+            <a href="./index.html" title="Kochwelt">
+                <img src="/assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
+                <img src="/assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
+            </a>
+            <div class="bar_container" id="hamburger_menu" onclick="toggleBurgerMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
+                <li><a href="index.html">Start</a></li>
+                <li class="activ_link"><a id="recipe.html">Rezept des Tages</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="imprimt.html">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="top_container container">
+            <h1>Karniyarik</h1>
+            <div class="aot_img" title="Background Image Karniyarik"></div>
+            <aside class="cards_container">
+                <section class="info_card" title="prepare time">
+                    <img src="/assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
+                    <time class="card_discription body_small">2<abbr title="Stunden" class="body_small"> h</time>
+                </section>
+                <section class="info_card" title="difficult">
+                    <img src="/assets/img/icons/brain-solid.svg" alt="brain" class="card_icon" />
+                    <p class="card_discription body_small">middle</p>
+                </section>
+                <section class="info_card" title="creation date">
+                    <img src="/assets/img/icons/calendar-alt-regular.svg" alt="calender" class="card_icon" />
+                    <time class="card_discription body_small">04.01.2026</time>
+                </section>
+            </aside>
+        </article>
+
+
+        <article class="ingredients_container container">
+            <div class="separetor" title="separetor"></div>
+            <section class="quantity_container" title="Quantity for dishes">
+                <label for="inp_quantity" class="inp_label">Zutaten für: </label>
+                <input type="number" min="1" max="20" value="1" pattern="09" placeholder="1" id="serviceQuantity" class="inp_field" onchange="amountCalculate()" onkeydown="enterKeyPress()" />
+                <button class="btn_main btn_inp" onclick="amountCalculate()">Portionen</button>
+            </section>
+
+            <section class="ingredients">
+                <div class="tableRezept">
+                    <table>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Aubergine"></span></td>
+                            <td>Aubergine</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amount"><span id="amount_Hackfleisch"></span></td>
+                            <td>Hackfleisch</td>
+                        </tr>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Zwiebel"></span></td>
+                            <td>kleine Zwiebel</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amount"><span id="amount_Tomate"></span></td>
+                            <td>kleine Tomate</td>
+                        </tr>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Paprika"></span></td>
+                            <td>kleine grüne Paprika</td>
+                        </tr>
+                        <tr class="tableWhite">
+                            <td class="amount"><span id="amount_Knoblauch"></span></td>
+                            <td>Knoblauchzehe</td>
+                        </tr>
+                        <tr class="tableGrey">
+                            <td class="amount"><span id="amount_Oel"></span></td>
+                            <td>Öl</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </article>
+
+        <article class="instruction container">
+            <h2>Zubereitung</h2>
+            <aside class="cards_container">
+                <div class="info_card">
+                    <img src="/assets/img/icons/hourglas.svg" alt="hourglas" class="card_icon" />
+                    <time datetime="time">1 <abbr title="Minuten" class="body_small">Std.</abbr></time>
+                    <p class="body_small">Arbeitszeit</p>
+                </div>
+                <div class="info_card">
+                    <img src="/assets/img/icons/snozze_time.svg" alt="snozze time" class="card_icon" />
+                    <div class="info_card">
+                        <time datetime="time" class="body_small">2 <abbr title="Stunden" class="body_small">Std.</abbr></time>
+                        <p class="body_small">Gesamtzeit</p>
+                    </div>
+                </div>
+            </aside>
+            <span>
+                <strong>Karniyarik ist ein klassisches türkisches Gericht mit gefüllten Auberginen.</strong> <br>
+                <br>
+                Zuerst Auberginen längs einschneiden, salzen und kurz ruhen lassen. <br>
+                Danach abspülen, trocknen und in Öl anbraten. Für die Füllung Zwiebeln, Knoblauch und
+                Hackfleisch anbraten, Tomaten, Paprika, Salz, Pfeffer und Paprikapulver zugeben. <br>
+                Auberginen öffnen, mit der Mischung füllen und in eine Form legen. Tomatensauce angießen,
+                bei 180 Grad etwa 30 Minuten backen. Mit Reis oder Brot servieren. <br> 
+                Traditionell wird das Gericht mit frischer Petersilie garniert und schmeckt am nächsten Tag <br>
+                noch intensiver, weil sich die Aromen verbinden und die Auberginen besonders
+                saftig und würzig bleiben, ideal für ein gemütliches Familienessen am Wochenende. <br>
+            </span>
+        </article>
+
+        <article class="container creator">
+            <h3>Rezept erstellt von:</h3>
+            <section>
+                <img src="/assets/img/profile.png" alt="account-pic" class="img_creator"/>
+                <p>Kadir Kahraman</p>
+            </section>
+        </article> 
+    </main>
+    <footer>
+        <article>
+            <a href="index.html" title="Kochwelt" class="logo_footer">
+                <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
+                <img src="/assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
+            </a>
+            <section class="social_links">
+                <a href="https://www.twitter.at/">
+                    <img src="../assets/img/social-icons/twitter_bird.png" alt="Twitter Logo und Link" class="footer_social_icon" />
+                </a>
+                <a href="https://www.facebook.com/?locale=de_DE">
+                    <img src="../assets/img/social-icons/facebook_logo.png" alt="Facebook Logo und Link" class="footer_social_icon" />
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="../assets/img/social-icons/instagrram_logo.png" alt="Instagram Logo und Link" class="footer_social_icon" />
+                </a>
+            </section>
+        </article>
+    </footer>
+    <script src="recipe.js"></script>
+</body>
+</html>
