@@ -22,13 +22,23 @@ function getQuantity() {
   }
 }
 
-function getRecipe(factor) {
-  factor = getQuantity();
+function getRecipe() {
+  const inp = document.getElementById("inp_quantity");
+  let portions = Number(inp.value);
+
+  if (isNaN(portions) || portions < 1) {
+    portions = 1;
+  }
+
+  if (portions > 20) {
+    portions = 20;
+  }
+  inp.value = portions;
   table.innerHTML = "";
   for (item in tiramisu) {
     let row = `
         <tr class="recipe_row">
-            <td class="recipe_amount">${tiramisu[item].amount * factor} ${tiramisu[item].unit} </td>
+            <td class="recipe_amount">${tiramisu[item].amount * portions} ${tiramisu[item].unit} </td>
             <td class="recipe_ingridient">${tiramisu[item].ingridient}</td>
         </tr>
         `;

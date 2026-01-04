@@ -52,7 +52,7 @@
         <div class="separetor" title="separetor"></div>
         <section class="quantity_container" title="Quantity for dishes">
           <label for="inp_quantity" class="inp_label">Zutaten für:</label>
-          <input type="number" id="inp_quantity" class="inp_field" min="1" max="20" pattern="09" placeholder="1" value="1" onchange="checkValue()" />
+          <input type="number" id="inp_quantity" class="inp_field" min="1" max="20" pattern="09" placeholder="1" value="1" oninput="checkValue()" />
           <button class="btn_main btn_inp" onclick="checkValue()">Portionen</button>
         </section>
         <section class="ingredients">
