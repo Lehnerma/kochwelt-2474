@@ -32,7 +32,7 @@ function calculateServings(servingsNumberValue, ingredientsAmount) {
 
 function calculateIngredientsAmount() {
   let servings = checkServingsNumber(servingsNumberInput.value);
-  console.log(servings);
+  servingsNumberInput.value = servings;
 
   ingredientsTable.innerHTML = "";
   for (let i = 0; i < recipe.length; i++) {
