@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logo_small.png"
+      type="image/x-icon"
+    />
 
     <link rel="stylesheet" href="../main_style.css" />
     <title>Tiramisu</title>
@@ -12,18 +16,32 @@
   <body onload="getRecipe()">
     <header>
       <nav>
-        <a href="./index.html" title="Kochwelt">
-          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
-          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
+        <a href="../index.html" title="Kochwelt">
+          <img
+            src="../assets/img/logo.png"
+            alt="Kochwelt Logo"
+            class="logo_full"
+          />
+          <img
+            src="../assets/img/logo_small.png"
+            alt="Kochwelt Logo"
+            class="logo_short"
+          />
         </a>
-        <div class="bar_container" id="hamburger_menu" onclick="toggleBurgerMenu()">
+        <div
+          class="bar_container"
+          id="hamburger_menu"
+          onclick="toggleBurgerMenu()"
+        >
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
         </div>
         <ul class="link-section resp_nav resp_nav_closed" id="resp_nav">
           <li><a href="../index.html">Start</a></li>
-          <li class="activ_link"><a id="recipe_of_the_day">Rezept des Tages</a></li>
+          <li class="activ_link">
+            <a id="recipe_of_the_day">Rezept des Tages</a>
+          </li>
           <li><a href="../contact.html">Kontakt</a></li>
           <li><a href="../impressum.html">Impressum</a></li>
         </ul>
@@ -35,15 +53,33 @@
         <div class="aot_img" title="Background Image Tiramisu"></div>
         <aside class="cards_container">
           <section class="info_card" title="prepare time">
-            <img src="../assets/img/icons/clock-regular.svg" alt="watch" class="card_icon" />
-            <time class="card_discription body_small">4<abbr title="Stunden" class="body_small">h</abbr>30<abbr title="Minuten" class="body_small">min</abbr></time>
+            <img
+              src="../assets/img/icons/clock-regular.svg"
+              alt="watch"
+              class="card_icon"
+            />
+            <time class="card_discription body_small"
+              >4<abbr title="Stunden" class="body_small">h</abbr>30<abbr
+                title="Minuten"
+                class="body_small"
+                >min</abbr
+              ></time
+            >
           </section>
           <section class="info_card" title="difficult">
-            <img src="../assets/img/icons/brain-solid.svg" alt="brain" class="card_icon" />
+            <img
+              src="../assets/img/icons/brain-solid.svg"
+              alt="brain"
+              class="card_icon"
+            />
             <p class="card_discription body_small">mittel</p>
           </section>
           <section class="info_card" title="creation date">
-            <img src="../assets/img/icons/calendar-alt-regular.svg" alt="calender" class="card_icon" />
+            <img
+              src="../assets/img/icons/calendar-alt-regular.svg"
+              alt="calender"
+              class="card_icon"
+            />
             <time class="card_discription body_small">24.12.2025</time>
           </section>
         </aside>
@@ -53,8 +89,20 @@
         <div class="separetor" title="separetor"></div>
         <section class="quantity_container" title="Quantity for dishes">
           <label for="inp_quantity" class="inp_label">Zutaten für:</label>
-          <input type="number" min="1" max="20" value="1" pattern="09" placeholder="1" id="inp_quantity" class="inp_field" oninput="getRecipe()" />
-          <button class="btn_main btn_inp" onclick="getRecipe()">Portionen</button>
+          <input
+            type="number"
+            min="1"
+            max="20"
+            value="1"
+            pattern="09"
+            placeholder="1"
+            id="inp_quantity"
+            class="inp_field"
+            oninput="getRecipe()"
+          />
+          <button class="btn_main btn_inp" onclick="getRecipe()">
+            Portionen
+          </button>
         </section>
 
         <section class="ingredients">
@@ -68,34 +116,74 @@
         <h2>Zubereitung</h2>
         <aside class="cards_container">
           <div class="info_card">
-            <img src="../assets/img/icons/hourglas.svg" alt="hourglas" class="card_icon" />
-            <time datetime="time">30 <abbr title="Minuten" class="body_small">Min.</abbr></time>
+            <img
+              src="../assets/img/icons/hourglas.svg"
+              alt="hourglas"
+              class="card_icon"
+            />
+            <time datetime="time"
+              >30 <abbr title="Minuten" class="body_small">Min.</abbr></time
+            >
             <p class="body_small">Arbeitszeit</p>
           </div>
           <div class="info_card">
-            <img src="../assets/img/icons/snozze_time.svg" alt="snozze time" class="card_icon" />
+            <img
+              src="../assets/img/icons/snozze_time.svg"
+              alt="snozze time"
+              class="card_icon"
+            />
             <div class="info_card">
-              <time datetime="time" class="body_small">4+ <abbr title="Stunden" class="body_small">Std.</abbr></time>
+              <time datetime="time" class="body_small"
+                >4+ <abbr title="Stunden" class="body_small">Std.</abbr></time
+              >
               <p class="body_small">Ruhezeit</p>
             </div>
           </div>
         </aside>
         <ol>
           <li>
-            <p>Am besten alle Zutaten aus dem Kühlschrank holen und schon auf Zimmertemperatur bringen.</p>
+            <p>
+              Am besten alle Zutaten aus dem Kühlschrank holen und schon auf
+              Zimmertemperatur bringen.
+            </p>
           </li>
           <li>
-            <p class="body">Eigelb mit Puderzucker über Wasserdampf zur <abbr class="underline body" title="Die Masse sollte eine Temperatur von ca 80° erreichen um die Proteine zu aktivieren">Rose</abbr> abziehen und in der Maschine kalt schlagen. Amaretto langsam in die Eigelbmasse einlaufen lassen.</p>
+            <p class="body">
+              Eigelb mit Puderzucker über Wasserdampf zur
+              <abbr
+                class="underline body"
+                title="Die Masse sollte eine Temperatur von ca 80° erreichen um die Proteine zu aktivieren"
+                >Rose</abbr
+              >
+              abziehen und in der Maschine kalt schlagen. Amaretto langsam in
+              die Eigelbmasse einlaufen lassen.
+            </p>
           </li>
           <li>
-            <p class="body">Eiweiß mit etwas <strong>Salz</strong> aufschlagen. Abwechselnd dann die Mascarpone und das Eiweiß unter die abgekühlte Eigelb-Creme heben.</p>
-            <p><strong>Vorsicht: am besten mit einem Schneebesen oder Kochlöffel unterheben nicht mit der Rührmaschiene!</strong></p>
+            <p class="body">
+              Eiweiß mit etwas <strong>Salz</strong> aufschlagen. Abwechselnd
+              dann die Mascarpone und das Eiweiß unter die abgekühlte
+              Eigelb-Creme heben.
+            </p>
+            <p>
+              <strong
+                >Vorsicht: am besten mit einem Schneebesen oder Kochlöffel
+                unterheben nicht mit der Rührmaschiene!</strong
+              >
+            </p>
           </li>
           <li>
-            <p class="body">Biskotten in kalten Kaffee tauken und kurz abtropfen lassen.</p>
+            <p class="body">
+              Biskotten in kalten Kaffee tauken und kurz abtropfen lassen.
+            </p>
           </li>
           <li>
-            <p class="body">Den Boden einer Form bedecken, darauf dann die getunken Biskuitt legen und wieder eine Creme verteilen. So lange verteilen bis alles aufgebraucht ist. Danach Kühl stellen. Für mindestens 3-4 Stunden</p>
+            <p class="body">
+              Den Boden einer Form bedecken, darauf dann die getunken Biskuitt
+              legen und wieder eine Creme verteilen. So lange verteilen bis
+              alles aufgebraucht ist. Danach Kühl stellen. Für mindestens 3-4
+              Stunden
+            </p>
           </li>
         </ol>
       </article>
@@ -103,7 +191,11 @@
       <article class="container creator">
         <h3>Erstellt von:</h3>
         <section>
-          <img src="../assets/img/max_creator.jpg" alt="account-pic" class="img_creator" />
+          <img
+            src="../assets/img/max_creator.jpg"
+            alt="account-pic"
+            class="img_creator"
+          />
           <p>Max Lehner</p>
         </section>
       </article>
@@ -111,18 +203,38 @@
     <footer>
       <article>
         <a href="./index.html" title="Kochwelt" class="logo_footer">
-          <img src="../assets/img/logo.png" alt="Kochwelt Logo" class="logo_full" />
-          <img src="../assets/img/logo_small.png" alt="Kochwelt Logo" class="logo_short" />
+          <img
+            src="../assets/img/logo.png"
+            alt="Kochwelt Logo"
+            class="logo_full"
+          />
+          <img
+            src="../assets/img/logo_small.png"
+            alt="Kochwelt Logo"
+            class="logo_short"
+          />
         </a>
         <section class="social_links">
           <a href="https://x.com/?lang=de">
-            <img src="../assets/img/social-icons/twitter_bird.png" alt="Twitter Logo und Link" class="footer_social_icon" />
+            <img
+              src="../assets/img/social-icons/twitter_bird.png"
+              alt="Twitter Logo und Link"
+              class="footer_social_icon"
+            />
           </a>
           <a href="https://www.facebook.com/?locale=de_DE">
-            <img src="../assets/img/social-icons/facebook_logo.png" alt="Facebook Logo und Link" class="footer_social_icon" />
+            <img
+              src="../assets/img/social-icons/facebook_logo.png"
+              alt="Facebook Logo und Link"
+              class="footer_social_icon"
+            />
           </a>
           <a href="https://www.instagram.com/">
-            <img src="../assets/img/social-icons/instagrram_logo.png" alt="Instagram Logo und Link" class="footer_social_icon" />
+            <img
+              src="../assets/img/social-icons/instagrram_logo.png"
+              alt="Instagram Logo und Link"
+              class="footer_social_icon"
+            />
           </a>
         </section>
       </article>
